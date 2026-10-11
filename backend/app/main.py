@@ -1,4 +1,5 @@
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -7,6 +8,7 @@ from fastapi.staticfiles import StaticFiles
 from app.config import get_settings
 from app.routers.auth import router as auth_router
 from app.services.database_service import DatabaseService
+from app.services.prediction_service import PredictionService
 
 
 settings = get_settings()
@@ -16,6 +18,7 @@ database_service = DatabaseService(settings)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     app.state.database_service = database_service
+    app.state.prediction_service = PredictionService()
     await database_service.connect()
     yield
     await database_service.close()
@@ -46,4 +49,8 @@ async def database_health() -> dict[str, str | bool]:
     return {"status": "ok" if connected else "unavailable", "connected": connected}
 
 
-app.mount("/", StaticFiles(directory="app/static", html=True), name="static")
+app.mount(
+    "/",
+    StaticFiles(directory=Path(__file__).resolve().parent / "static", html=True),
+    name="static",
+)

@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.append(str(ROOT))
 
 EVAL_DIR = ROOT / "ml" / "evaluation"
-MODELS_DIR = ROOT / "ml" / "models"
+MODELS_DIR = ROOT / "ml" / "models" / "legacy_hostel"
 EVAL_DIR.mkdir(parents=True, exist_ok=True)
 MODELS_DIR.mkdir(parents=True, exist_ok=True)
 

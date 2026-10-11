@@ -66,7 +66,7 @@ def main():
         raise FileNotFoundError(f"Cleaned dataset not found: {data_path}")
 
     df = load_data(data_path)
-    out_dir = root / "ml" / "models"
+    out_dir = root / "ml" / "models" / "legacy_hotel"
     train_and_save(df, out_dir)
 
 

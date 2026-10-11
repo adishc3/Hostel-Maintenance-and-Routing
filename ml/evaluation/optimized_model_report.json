@@ -1,0 +1,187 @@
+{
+  "source_dataset": "cleaned_hotel_maintenance_dataset.csv",
+  "source_rows_after_cleaning": 1450,
+  "exact_duplicate_rows_removed": 50,
+  "train_size": 1160,
+  "test_size": 290,
+  "split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratify": "hostel_category"
+  },
+  "tfidf_fit_scope": "training partition only",
+  "vectorizer_parameters": {
+    "max_features": 5000,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.95,
+    "sublinear_tf": true
+  },
+  "scikit_learn_version": "1.9.0",
+  "joblib_version": "1.5.3",
+  "numpy_version": "2.5.2",
+  "scipy_version": "1.18.0",
+  "category_labels": [
+    "Electrical",
+    "General",
+    "Plumbing",
+    "Structural"
+  ],
+  "priority_labels": [
+    "High",
+    "Low",
+    "Medium"
+  ],
+  "priority_urgent_cue_counts": {
+    "High": {
+      "rows": 430,
+      "complaints_containing_urgent": 110
+    },
+    "Low": {
+      "rows": 361,
+      "complaints_containing_urgent": 62
+    },
+    "Medium": {
+      "rows": 659,
+      "complaints_containing_urgent": 114
+    }
+  },
+  "category_metrics": {
+    "accuracy": 0.9689655172413794,
+    "precision_weighted": 0.9708527493010252,
+    "recall_weighted": 0.9689655172413794,
+    "f1_weighted": 0.9686184465575259,
+    "f1_macro": 0.9664685791409016,
+    "classification_report": {
+      "Electrical": {
+        "precision": 1.0,
+        "recall": 0.8648648648648649,
+        "f1-score": 0.927536231884058,
+        "support": 37.0
+      },
+      "General": {
+        "precision": 0.9391891891891891,
+        "recall": 1.0,
+        "f1-score": 0.9686411149825784,
+        "support": 139.0
+      },
+      "Plumbing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 46.0
+      },
+      "Structural": {
+        "precision": 1.0,
+        "recall": 0.9411764705882353,
+        "f1-score": 0.9696969696969697,
+        "support": 68.0
+      },
+      "accuracy": 0.9689655172413794,
+      "macro avg": {
+        "precision": 0.9847972972972973,
+        "recall": 0.9515103338632751,
+        "f1-score": 0.9664685791409016,
+        "support": 290.0
+      },
+      "weighted avg": {
+        "precision": 0.9708527493010252,
+        "recall": 0.9689655172413794,
+        "f1-score": 0.9686184465575259,
+        "support": 290.0
+      }
+    }
+  },
+  "priority_metrics": {
+    "accuracy": 0.9862068965517241,
+    "precision_weighted": 0.9863213563249537,
+    "recall_weighted": 0.9862068965517241,
+    "f1_weighted": 0.9862143703353448,
+    "f1_macro": 0.9847782648333396,
+    "classification_report": {
+      "High": {
+        "precision": 1.0,
+        "recall": 0.9908256880733946,
+        "f1-score": 0.9953917050691244,
+        "support": 109.0
+      },
+      "Low": {
+        "precision": 0.9836065573770492,
+        "recall": 0.967741935483871,
+        "f1-score": 0.975609756097561,
+        "support": 62.0
+      },
+      "Medium": {
+        "precision": 0.9752066115702479,
+        "recall": 0.9915966386554622,
+        "f1-score": 0.9833333333333333,
+        "support": 119.0
+      },
+      "accuracy": 0.9862068965517241,
+      "macro avg": {
+        "precision": 0.9862710563157657,
+        "recall": 0.9833880874042427,
+        "f1-score": 0.9847782648333396,
+        "support": 290.0
+      },
+      "weighted avg": {
+        "precision": 0.9863213563249537,
+        "recall": 0.9862068965517241,
+        "f1-score": 0.9862143703353448,
+        "support": 290.0
+      }
+    }
+  },
+  "external_predictions": [
+    {
+      "complaint": "The bathroom tap in my room is leaking continuously.",
+      "category": "Plumbing",
+      "priority": "Medium"
+    },
+    {
+      "complaint": "There is no electricity in my room and the power socket is not working.",
+      "category": "General",
+      "priority": "High"
+    },
+    {
+      "complaint": "The wall in the corridor has a large crack.",
+      "category": "Structural",
+      "priority": "Low"
+    },
+    {
+      "complaint": "The WiFi connection in my room is very weak.",
+      "category": "General",
+      "priority": "Medium"
+    },
+    {
+      "complaint": "Water is leaking from the ceiling and falling onto the floor.",
+      "category": "Plumbing",
+      "priority": "High"
+    },
+    {
+      "complaint": "The ceiling fan is not working properly.",
+      "category": "General",
+      "priority": "Medium"
+    },
+    {
+      "complaint": "The door hinge is broken and the door is difficult to close.",
+      "category": "General",
+      "priority": "Medium"
+    },
+    {
+      "complaint": "The room furniture is damaged and needs replacement.",
+      "category": "General",
+      "priority": "Medium"
+    }
+  ],
+  "evaluation_limitations": [
+    "The notebook fitted TF-IDF before its train/test split, so its reported test metrics include vocabulary/IDF leakage.",
+    "This retraining fits TF-IDF only on training data; it does not eliminate possible near-duplicate or source-label bias.",
+    "Category targets are generated by the notebook's keyword-based category rules, so category scores measure agreement with those heuristic labels rather than independent human adjudication.",
+    "The word 'urgent' occurs in every priority class in the deduplicated source data; priority performance may still reflect source-text conventions.",
+    "Notebook priority labels (High/Medium/Low) are preserved as trained labels."
+  ]
+}
