@@ -1,0 +1,215 @@
+id,complaint,hostel_category,category
+1,Several corridor light covers on floor 9 are dusty and yellowing. Please advise on timeline.,Structural,Structural
+2,Urgent: The treadmill in the gym caught fire briefly due to a motor fault. Gym evacuated. Urgent inspection needed. Please prioritize.,Electrical,Appliance
+8,Staff report: There is no electricity in room 476. The entire room is without power since last night. Please prioritize.,Electrical,HVAC
+42,Guest complaint: One of the exhaust fans above the grill station is making a grinding noise. Guest is waiting for resolution.,Electrical,Furniture
+67,The pool water looks slightly cloudy. Chemical levels need to be checked. Guest has requested an update.,General,Electrical
+74,Staff report: The gym ceiling paint is slightly discolored near the air vent. Reported by housekeeping staff.,Structural,Structural
+77,Water is leaking from the gym ceiling onto electrical equipment. Gym closed as precaution. Guest has requested an update.,Electrical,Electrical
+98,Please note: There is no electricity in room 641. The entire room is without power since last night. Reported by housekeeping staff.,Electrical,Safety/Security
+117,Urgent: The bathroom exhaust fan in room 791 is very noisy and disturbing the guest at night.,Electrical,Appliance
+119,Please note: Corridor on floor 5 has a strong burning smell near the electrical cupboard. Please advise on timeline.,Electrical,Plumbing
+131,Please note: The bathroom exhaust fan in room 805 is very noisy and disturbing the guest at night.,Electrical,Appliance
+135,The welcome signage in the lobby has a broken light on one letter. Please advise on timeline.,Structural,Furniture
+137,Urgent: Rooftop pool pump has stopped working. Water turning stagnant. Guest is waiting for resolution.,Electrical,Safety/Security
+140,Guest complaint: The treadmill in the gym caught fire briefly due to a motor fault. Gym evacuated. Urgent inspection needed. Guest is waiting for resolution.,Electrical,Electrical
+144,Urgent: The lobby fountain pump is making a loud rattling sound. This has been reported before.,General,HVAC
+149,The conference room 7 lighting control panel is not responding. Please prioritize.,General,Electrical
+158,Please note: The bathroom exhaust fan in room 255 is very noisy and disturbing the guest at night. Guest is waiting for resolution.,Electrical,Electrical
+159,The pool water looks slightly cloudy. Chemical levels need to be checked. Reported by housekeeping staff.,General,Pool/Water Feature
+162,Please note: The lobby fountain pump is making a loud rattling sound. Guest has requested an update.,General,General
+165,The sauna heating element has malfunctioned and is producing smoke. This has been reported before.,Electrical,Pool/Water Feature
+171,Guest complaint: The laundry room extraction fan is noisy and staff have complained. Guest has requested an update.,Electrical,Appliance
+175,Please note: The gym ceiling paint is slightly discolored near the air vent. Please prioritize.,Structural,Structural
+177,The conference room 12 lighting control panel is not responding. Please prioritize.,General,HVAC
+183,Staff report: One of the pendant lights above the bar area is slightly tilted. Please advise on timeline.,General,General
+188,Urgent: The bedside lamp on the left side in room 271 does not turn on. Reported by housekeeping staff.,Electrical,Appliance
+193,Urgent: The toilet roll holder in room 442 is slightly loose on the wall. Guest has requested an update.,Structural,Structural
+194,Please note: Corridor on floor 5 has a strong burning smell near the electrical cupboard. Front desk has been notified.,Electrical,Plumbing
+203,Corridor on floor 5 has a strong burning smell near the electrical cupboard. Please advise on timeline.,Electrical,Safety/Security
+215,Urgent: The bathroom light in room 531 flickers when turned on. Needs electrical check. Reported by housekeeping staff.,Electrical,Appliance
+216,Guest complaint: One of the pendant lights above the bar area is slightly tilted. Front desk has been notified.,General,Housekeeping
+225,Staff report: One of the pendant lights above the bar area is slightly tilted. Guest has requested an update.,General,General
+230,Staff report: The buffet heating station lamp is not maintaining correct temperature. Please advise on timeline.,General,Furniture
+232,Please note: One of the exhaust fans above the grill station is making a grinding noise. Reported by housekeeping staff.,Electrical,HVAC
+234,Urgent: The parking entrance welcome signage has a broken light panel. Guest has requested an update.,Structural,Housekeeping
+240,Guest complaint: There is no electricity in room 288. The entire room is without power since last night. Please advise on timeline.,Electrical,Plumbing
+243,Urgent: One of the exhaust fans above the grill station is making a grinding noise. Please advise on timeline.,Electrical,Internet/AV
+244,Corridor lights on floor 1 are flickering throughout the night disturbing guests. Guest has requested an update.,Electrical,Electrical
+249,Staff report: Room 683 has a flickering light in the bathroom. Bulb or fixture needs to be checked. Guest is waiting for resolution.,Electrical,Internet/AV
+250,Guest complaint: The rooftop signage lighting has two letters not illuminating. Guest has requested an update.,General,Landscaping
+255,The bathroom exhaust fan in room 475 is very noisy and disturbing the guest at night. Guest has requested an update.,Electrical,Plumbing
+268,The rooftop signage lighting has two letters not illuminating. Please advise on timeline.,General,General
+271,Urgent: The electric vehicle charging point in bay 6 is showing a fault error. Please prioritize.,Electrical,Plumbing
+272,One of the lobby artwork frames is hanging slightly crooked. Reported by housekeeping staff.,Structural,Housekeeping
+291,Please note: Several corridor light covers on floor 1 are dusty and yellowing. Guest is waiting for resolution.,Structural,General
+301,Wallpaper near the headboard in room 823 is coming off slightly. Guest has requested an update.,Structural,Furniture
+309,The parking entrance welcome signage has a broken light panel. Guest is waiting for resolution.,Structural,General
+311,The parking entrance welcome signage has a broken light panel. Guest has requested an update.,Structural,Structural
+317,Staff report: The bedside lamp on the left side in room 110 does not turn on. Please prioritize.,Electrical,HVAC
+329,Guest complaint: Rooftop bar area outdoor lights are not working for evening service. Reported by housekeeping staff.,Electrical,Electrical
+334,The bedside lamp on the left side in room 268 does not turn on. Front desk has been notified.,Electrical,Furniture
+350,Guest complaint: The toilet roll holder in room 562 is slightly loose on the wall. Guest has requested an update.,Structural,General
+362,There is no electricity in room 758. The entire room is without power since last night. Front desk has been notified.,Electrical,Plumbing
+363,The bathroom exhaust fan in room 761 is very noisy and disturbing the guest at night. Front desk has been notified.,Electrical,Plumbing
+366,Staff report: The lobby fountain pump is making a loud rattling sound. Please advise on timeline.,General,HVAC
+369,Staff report: One of the restaurant ceiling lights above table 7 has gone out. Reported by housekeeping staff.,Structural,HVAC
+381,Corridor lights on floor 7 are flickering throughout the night disturbing guests. Guest has requested an update.,Electrical,Appliance
+389,Main kitchen extraction fan has stopped working. Kitchen filling with smoke during service. Guest has requested an update.,Electrical,Safety/Security
+404,Corridor lights on floor 8 are flickering throughout the night disturbing guests. Guest has requested an update.,Electrical,Electrical
+406,Urgent: The lobby fountain pump is making a loud rattling sound. Guest has requested an update.,General,General
+412,The conference room 14 lighting control panel is not responding. Guest is waiting for resolution.,General,HVAC
+413,Guest complaint: A kitchen staff member reported electric shock from the main oven panel. Take oven out of service. Front desk has been notified.,Electrical,Appliance
+418,The treadmill in the gym caught fire briefly due to a motor fault. Gym evacuated. Urgent inspection needed. Please advise on timeline.,Electrical,Appliance
+453,Staff report: The rooftop signage lighting has two letters not illuminating. Front desk has been notified.,General,General
+456,The laundry room extraction fan is noisy and staff have complained. Guest has requested an update.,Electrical,Furniture
+457,Urgent: The conference room 14 lighting control panel is not responding. Please advise on timeline.,General,Internet/AV
+458,Urgent: The swimming pool pump has stopped working completely. Water is turning green. Reported by housekeeping staff.,Electrical,Pool/Water Feature
+467,Urgent: Water is leaking from the gym ceiling onto electrical equipment. Gym closed as precaution. Guest is waiting for resolution.,Electrical,Safety/Security
+468,The bathroom light in room 848 flickers when turned on. Needs electrical check. Front desk has been notified.,Electrical,Plumbing
+472,Staff report: One of the pendant lights above the bar area is slightly tilted. Front desk has been notified.,General,Furniture
+476,Urgent: Parking level 3 lighting is very dim. Several fluorescent tubes have gone out. Guest has requested an update.,Electrical,Plumbing
+486,Please note: There is no electricity in room 788. The entire room is without power since last night. Guest has requested an update.,Electrical,Pest Control
+491,Wallpaper near the headboard in room 795 is coming off slightly. Please advise on timeline.,Structural,Furniture
+493,Urgent: Garden pathway lighting is not working at night creating a safety hazard for guests.,Electrical,Safety/Security
+497,Urgent: The electric vehicle charging point in bay 15 is showing a fault error. Please prioritize.,Electrical,Plumbing
+506,Please note: The parking entrance welcome signage has a broken light panel. Please advise on timeline.,Structural,General
+507,The bar back wall display lighting has two bulbs blown.,Structural,Furniture
+508,Staff report: The electric vehicle charging point in bay 16 is showing a fault error. Reported by housekeeping staff.,Electrical,Plumbing
+516,Urgent: The swimming pool pump has stopped working completely. Water is turning green. This has been reported before.,Electrical,Pool/Water Feature
+521,Room 405 has a flickering light in the bathroom. Bulb or fixture needs to be checked.,Electrical,Furniture
+539,One of the exhaust fans above the grill station is making a grinding noise. Guest is waiting for resolution.,Electrical,Furniture
+541,Several garden pathway lights have blown and need replacing. Please prioritize.,General,Landscaping
+543,The welcome signage in the lobby has a broken light on one letter. Reported by housekeeping staff.,Structural,General
+558,Please note: Corridor lights on floor 12 are flickering throughout the night disturbing guests. Please advise on timeline.,Electrical,Electrical
+570,One of the restaurant ceiling lights above table 2 has gone out. This has been reported before.,Structural,Internet/AV
+571,Urgent: The bathroom light in room 595 flickers when turned on. Needs electrical check. Front desk has been notified.,Electrical,Plumbing
+572,Please note: The welcome signage in the lobby has a broken light on one letter.,Structural,General
+573,The bathroom exhaust fan in room 676 is very noisy and disturbing the guest at night. This has been reported before.,Electrical,Plumbing
+578,Urgent: Room 800 has a flickering light in the bathroom. Bulb or fixture needs to be checked. Guest is waiting for resolution.,Electrical,Plumbing
+580,The toilet roll holder in room 704 is slightly loose on the wall. This has been reported before.,Structural,General
+583,Rooftop pool pump has stopped working. Water turning stagnant. Guest has requested an update.,Electrical,Structural
+586,Staff report: One of the exhaust fans above the grill station is making a grinding noise. Please prioritize.,Electrical,Electrical
+603,Staff report: There is no electricity in room 648. The entire room is without power since last night. Front desk has been notified.,Electrical,HVAC
+606,The lighting inside elevator 17 is flickering. Needs bulb or wiring check. Guest is waiting for resolution.,Electrical,Electrical
+608,The lighting inside elevator 17 is flickering. Needs bulb or wiring check. Please advise on timeline.,Electrical,Elevator
+610,The rooftop signage lighting has two letters not illuminating. Front desk has been notified.,General,General
+614,Rooftop pool pump has stopped working. Water turning stagnant. Reported by housekeeping staff.,Electrical,Safety/Security
+615,Guest complaint: The parking entrance welcome signage has a broken light panel. Guest is waiting for resolution.,Structural,Structural
+623,Staff report: The electric vehicle charging point in bay 16 is showing a fault error. Guest is waiting for resolution.,Electrical,Electrical
+630,Please note: Wallpaper near the headboard in room 734 is coming off slightly. Please advise on timeline.,Structural,Structural
+638,Please note: The gym ceiling paint is slightly discolored near the air vent. Guest has requested an update.,Structural,Structural
+649,Staff report: The sauna heating element has malfunctioned and is producing smoke. Please advise on timeline.,Electrical,Pool/Water Feature
+650,Please note: Wallpaper near the headboard in room 575 is coming off slightly. Please prioritize.,Structural,Structural
+654,Rooftop bar area outdoor lights are not working for evening service. Please advise on timeline.,Electrical,Landscaping
+655,Room 218 has a flickering light in the bathroom. Bulb or fixture needs to be checked. Front desk has been notified.,Electrical,Internet/AV
+657,Urgent: Corridor lights on floor 4 are flickering throughout the night disturbing guests. Reported by housekeeping staff.,Electrical,Electrical
+660,Urgent: The bathroom light in room 769 flickers when turned on. Needs electrical check. Please prioritize.,Electrical,Electrical
+672,Garden pathway lighting is not working at night creating a safety hazard for guests. Guest is waiting for resolution.,Electrical,Electrical
+673,The lampshade in room 694 has a small burn mark on the inside. Reported by housekeeping staff.,General,Housekeeping
+692,Guest complaint: The lighting inside elevator 6 is flickering. Needs bulb or wiring check. Please advise on timeline.,Electrical,Electrical
+693,Urgent: The conference room 15 lighting control panel is not responding.,General,Internet/AV
+707,Guest complaint: There is no electricity in room 397. The entire room is without power since last night. Guest is waiting for resolution.,Electrical,Safety/Security
+714,A kitchen staff member reported electric shock from the main oven panel. Take oven out of service. This has been reported before.,Electrical,Safety/Security
+720,Urgent: The pool water looks slightly cloudy. Chemical levels need to be checked. This has been reported before.,General,Plumbing
+729,Staff report: One of the lobby artwork frames is hanging slightly crooked. Front desk has been notified.,Structural,Furniture
+734,Guest complaint: The lobby fountain pump is making a loud rattling sound. This has been reported before.,General,Electrical
+746,Guest complaint: Garden pathway lighting is not working at night creating a safety hazard for guests. Guest has requested an update.,Electrical,Electrical
+748,The sauna heating element has malfunctioned and is producing smoke. Reported by housekeeping staff.,Electrical,Safety/Security
+750,Guest complaint: The toilet roll holder in room 645 is slightly loose on the wall. Guest is waiting for resolution.,Structural,General
+752,A kitchen staff member reported electric shock from the main oven panel. Take oven out of service. Please advise on timeline.,Electrical,Plumbing
+786,Staff report: Garden pathway lighting is not working at night creating a safety hazard for guests. Front desk has been notified.,Electrical,Safety/Security
+787,Urgent: The conference room 1 lighting control panel is not responding. Front desk has been notified.,General,Furniture
+794,The swimming pool pump has stopped working completely. Water is turning green. Please prioritize.,Electrical,Structural
+795,Please note: Several garden pathway lights have blown and need replacing. This has been reported before.,General,Landscaping
+825,Please note: Rooftop bar area outdoor lights are not working for evening service. This has been reported before.,Electrical,Landscaping
+826,Guest complaint: The bathroom light in room 273 flickers when turned on. Needs electrical check. Guest is waiting for resolution.,Electrical,Appliance
+848,The bar back wall display lighting has two bulbs blown. Guest is waiting for resolution.,Structural,Electrical
+849,Please note: The treadmill in the gym caught fire briefly due to a motor fault. Gym evacuated. Urgent inspection needed. Front desk has been notified.,Electrical,HVAC
+854,Please note: The welcome signage in the lobby has a broken light on one letter. Guest is waiting for resolution.,Structural,Furniture
+855,Parking level 2 lighting is very dim. Several fluorescent tubes have gone out.,Electrical,Plumbing
+859,Staff report: The bar back wall display lighting has two bulbs blown.,Structural,Electrical
+864,Guest complaint: The buffet heating station lamp is not maintaining correct temperature. This has been reported before.,General,Electrical
+867,Pool lights are not working at night making it unsafe for evening swimmers. This has been reported before.,Electrical,Pool/Water Feature
+872,The toilet roll holder in room 374 is slightly loose on the wall. Please advise on timeline.,Structural,Structural
+882,Please note: Several corridor light covers on floor 2 are dusty and yellowing. Reported by housekeeping staff.,Structural,Structural
+898,Guest complaint: There is no electricity in room 756. The entire room is without power since last night.,Electrical,Plumbing
+901,Rooftop heating lamps — 20 of them are not working for evening guests. Guest has requested an update.,Electrical,Appliance
+912,Staff report: Parking level 4 lighting is very dim. Several fluorescent tubes have gone out. Please advise on timeline.,Electrical,Appliance
+916,Please note: One of the pendant lights above the bar area is slightly tilted. Please advise on timeline.,General,Housekeeping
+930,Guest complaint: Main kitchen extraction fan has stopped working. Kitchen filling with smoke during service. Guest has requested an update.,Electrical,Appliance
+932,Water is leaking from the gym ceiling onto electrical equipment. Gym closed as precaution. Please advise on timeline.,Electrical,Appliance
+956,Please note: Main kitchen extraction fan has stopped working. Kitchen filling with smoke during service. Guest has requested an update.,Electrical,Safety/Security
+960,Please note: Pool lights are not working at night making it unsafe for evening swimmers. This has been reported before.,Electrical,Pool/Water Feature
+964,Guest complaint: The welcome signage in the lobby has a broken light on one letter. This has been reported before.,Structural,Housekeeping
+968,Staff report: The treadmill in the gym caught fire briefly due to a motor fault. Gym evacuated. Urgent inspection needed. Please advise on timeline.,Electrical,Appliance
+970,Please note: The garden fountain is not running. Pump may have stopped working. Guest is waiting for resolution.,Electrical,General
+972,The bar back wall display lighting has two bulbs blown. Please advise on timeline.,Structural,Furniture
+974,Please note: Motion sensor lights on floor 11 corridor are not turning on when guests walk past. Reported by housekeeping staff.,Electrical,General
+975,The pool water looks slightly cloudy. Chemical levels need to be checked. Front desk has been notified.,General,Plumbing
+988,Guest complaint: There is no electricity in room 448. The entire room is without power since last night. Please prioritize.,Electrical,Pest Control
+992,Guest complaint: Main kitchen extraction fan has stopped working. Kitchen filling with smoke during service. Front desk has been notified.,Electrical,Pest Control
+1004,The bathroom light in room 711 flickers when turned on. Needs electrical check. Guest is waiting for resolution.,Electrical,Plumbing
+1015,Urgent: One of the pendant lights above the bar area is slightly tilted. Guest is waiting for resolution.,General,Furniture
+1022,The gym ceiling paint is slightly discolored near the air vent. Please prioritize.,Structural,Housekeeping
+1024,The lighting inside elevator 18 is flickering. Needs bulb or wiring check. Please prioritize.,Electrical,Elevator
+1028,Staff report: The bar ambient lighting control panel is unresponsive. Guest is waiting for resolution.,General,Electrical
+1041,Please note: Several corridor light covers on floor 9 are dusty and yellowing. Please advise on timeline.,Structural,General
+1055,Urgent: The welcome signage in the lobby has a broken light on one letter. Guest is waiting for resolution.,Structural,Housekeeping
+1057,Corridor on floor 9 has a strong burning smell near the electrical cupboard. Reported by housekeeping staff.,Electrical,Safety/Security
+1061,Staff report: The lampshade in room 671 has a small burn mark on the inside. Please advise on timeline.,General,Furniture
+1076,Guest complaint: The laundry room extraction fan is noisy and staff have complained. Guest is waiting for resolution.,Electrical,Furniture
+1078,One of the lobby artwork frames is hanging slightly crooked.,Structural,Furniture
+1084,One of the exhaust fans above the grill station is making a grinding noise. Guest has requested an update.,Electrical,Internet/AV
+1091,Guest complaint: The bedside lamp on the left side in room 719 does not turn on. Reported by housekeeping staff.,Electrical,Appliance
+1092,Please note: The sauna heating element has malfunctioned and is producing smoke.,Electrical,HVAC
+1100,Staff report: Pool lights are not working at night making it unsafe for evening swimmers. This has been reported before.,Electrical,Pool/Water Feature
+1119,Please note: Several garden pathway lights have blown and need replacing. Front desk has been notified.,General,General
+1138,Please note: Wallpaper near the headboard in room 807 is coming off slightly. Reported by housekeeping staff.,Structural,Housekeeping
+1144,Staff report: The toilet roll holder in room 771 is slightly loose on the wall. Front desk has been notified.,Structural,Housekeeping
+1168,Staff report: A kitchen staff member reported electric shock from the main oven panel. Take oven out of service. Guest has requested an update.,Electrical,Appliance
+1169,One of the restaurant ceiling lights above table 10 has gone out. Guest has requested an update.,Structural,HVAC
+1173,Urgent: The conference room 15 lighting control panel is not responding. Please advise on timeline.,General,Electrical
+1191,The bathroom light in room 785 flickers when turned on. Needs electrical check. This has been reported before.,Electrical,Electrical
+1197,Corridor on floor 6 has a strong burning smell near the electrical cupboard.,Electrical,Electrical
+1200,Urgent: The bathroom exhaust fan in room 625 is very noisy and disturbing the guest at night. Front desk has been notified.,Electrical,Appliance
+1207,Urgent: The laundry room extraction fan is noisy and staff have complained. Front desk has been notified.,Electrical,Appliance
+1212,Please note: Water is leaking from the gym ceiling onto electrical equipment. Gym closed as precaution. Guest has requested an update.,Electrical,Appliance
+1236,Please note: One of the restaurant ceiling lights above table 2 has gone out. Please advise on timeline.,Structural,Internet/AV
+1238,Guest complaint: The conference room 4 lighting control panel is not responding. Please advise on timeline.,General,Internet/AV
+1242,Guest complaint: Motion sensor lights on floor 6 corridor are not turning on when guests walk past. Front desk has been notified.,Electrical,Electrical
+1243,The treadmill in the gym caught fire briefly due to a motor fault. Gym evacuated. Urgent inspection needed. Guest has requested an update.,Electrical,Appliance
+1249,Please note: Corridor on floor 6 has a strong burning smell near the electrical cupboard. Guest has requested an update.,Electrical,Safety/Security
+1280,Staff report: Wallpaper near the headboard in room 758 is coming off slightly. Please advise on timeline.,Structural,Furniture
+1286,The bathroom light in room 143 flickers when turned on. Needs electrical check. This has been reported before.,Electrical,Electrical
+1290,Garden pathway lighting is not working at night creating a safety hazard for guests. Please advise on timeline.,Electrical,Plumbing
+1309,The swimming pool pump has stopped working completely. Water is turning green. Reported by housekeeping staff.,Electrical,Safety/Security
+1310,Please note: The toilet roll holder in room 820 is slightly loose on the wall. Please advise on timeline.,Structural,General
+1315,Staff report: The bedside lamp on the left side in room 589 does not turn on. Please prioritize.,Electrical,Appliance
+1325,Urgent: The sauna heating element has malfunctioned and is producing smoke. Please advise on timeline.,Electrical,Safety/Security
+1334,Please note: Corridor lights on floor 9 are flickering throughout the night disturbing guests. Front desk has been notified.,Electrical,General
+1348,Staff report: The lighting inside elevator 8 is flickering. Needs bulb or wiring check. Reported by housekeeping staff.,Electrical,Elevator
+1358,Please note: The bar ambient lighting control panel is unresponsive. Guest has requested an update.,General,Electrical
+1359,One of the pendant lights above the bar area is slightly tilted. Please advise on timeline.,General,Housekeeping
+1363,The conference room 13 lighting control panel is not responding. Please prioritize.,General,Electrical
+1367,Urgent: The sauna heating element has malfunctioned and is producing smoke. This has been reported before.,Electrical,Safety/Security
+1368,Please note: Corridor lights on floor 2 are flickering throughout the night disturbing guests. Guest is waiting for resolution.,Electrical,Electrical
+1378,Parking level 4 lighting is very dim. Several fluorescent tubes have gone out.,Electrical,Appliance
+1379,Please note: The swimming pool pump has stopped working completely. Water is turning green. This has been reported before.,Electrical,Pool/Water Feature
+1404,Staff report: The swimming pool pump has stopped working completely. Water is turning green. This has been reported before.,Electrical,Structural
+1406,Guest complaint: Rooftop bar area outdoor lights are not working for evening service. Front desk has been notified.,Electrical,Landscaping
+1409,The bedside lamp on the left side in room 372 does not turn on. This has been reported before.,Electrical,Furniture
+1414,Please note: Parking level 5 lighting is very dim. Several fluorescent tubes have gone out. Please prioritize.,Electrical,Plumbing
+1416,Water is leaking from the gym ceiling onto electrical equipment. Gym closed as precaution. Reported by housekeeping staff.,Electrical,Safety/Security
+1420,Urgent: One of the pendant lights above the bar area is slightly tilted.,General,General
+1442,The bathroom exhaust fan in room 787 is very noisy and disturbing the guest at night. Guest is waiting for resolution.,Electrical,Appliance
+1443,The lobby fountain pump is making a loud rattling sound. Front desk has been notified.,General,Electrical
+1458,Guest complaint: The swimming pool pump has stopped working completely. Water is turning green. Guest is waiting for resolution.,Electrical,Safety/Security
+1460,Guest complaint: The bar back wall display lighting has two bulbs blown. This has been reported before.,Structural,Furniture
+1467,A kitchen staff member reported electric shock from the main oven panel. Take oven out of service. Guest is waiting for resolution.,Electrical,Appliance
+1469,Urgent: Garden pathway lighting is not working at night creating a safety hazard for guests. Reported by housekeeping staff.,Electrical,Plumbing
+1476,There is no electricity in room 229. The entire room is without power since last night. This has been reported before.,Electrical,Pest Control
+1485,Staff report: One of the restaurant ceiling lights above table 19 has gone out. Please advise on timeline.,Structural,Appliance
+1486,Water is leaking from the gym ceiling onto electrical equipment. Gym closed as precaution. Guest is waiting for resolution.,Electrical,HVAC
+1490,Guest complaint: The toilet roll holder in room 283 is slightly loose on the wall.,Structural,Structural
+1494,The bar ambient lighting control panel is unresponsive. Front desk has been notified.,General,Furniture

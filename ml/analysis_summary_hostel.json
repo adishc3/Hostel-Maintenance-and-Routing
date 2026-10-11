@@ -1,0 +1,29 @@
+{
+  "total_records": 1450,
+  "category_counts": {
+    "Structural": 542,
+    "General": 528,
+    "Plumbing": 221,
+    "Electrical": 159
+  },
+  "category_percentages": {
+    "Structural": 37.38,
+    "General": 36.41,
+    "Plumbing": 15.24,
+    "Electrical": 10.97
+  },
+  "missing_values": {
+    "id": 0,
+    "complaint": 0,
+    "area": 0,
+    "category": 0,
+    "priority": 0,
+    "department": 0,
+    "estimated_resolution_hours": 0,
+    "hostel_category": 0,
+    "complaint_proc": 0,
+    "complaint_norm": 0
+  },
+  "exact_duplicate_complaints": 0,
+  "near_duplicate_complaints": 9
+}

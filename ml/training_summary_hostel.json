@@ -1,0 +1,24 @@
+{
+  "original_record_count": 1450,
+  "final_record_count": 1450,
+  "category_distribution": {
+    "Structural": 542,
+    "General": 528,
+    "Plumbing": 221,
+    "Electrical": 159
+  },
+  "train_size": 1160,
+  "test_size": 290,
+  "category_best_params": {
+    "clf__C": 10.0,
+    "tfidf__max_df": 0.9,
+    "tfidf__min_df": 3,
+    "tfidf__ngram_range": [
+      1,
+      2
+    ]
+  },
+  "priority_best_params": {
+    "C": 10.0
+  }
+}

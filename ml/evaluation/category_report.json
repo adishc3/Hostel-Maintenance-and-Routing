@@ -1,0 +1,39 @@
+{
+  "Electrical": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 32.0
+  },
+  "General": {
+    "precision": 0.9814814814814815,
+    "recall": 1.0,
+    "f1-score": 0.9906542056074766,
+    "support": 106.0
+  },
+  "Plumbing": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 44.0
+  },
+  "Structural": {
+    "precision": 1.0,
+    "recall": 0.9814814814814815,
+    "f1-score": 0.9906542056074766,
+    "support": 108.0
+  },
+  "accuracy": 0.993103448275862,
+  "macro avg": {
+    "precision": 0.9953703703703703,
+    "recall": 0.9953703703703703,
+    "f1-score": 0.9953271028037383,
+    "support": 290.0
+  },
+  "weighted avg": {
+    "precision": 0.9932311621966795,
+    "recall": 0.993103448275862,
+    "f1-score": 0.993103448275862,
+    "support": 290.0
+  }
+}

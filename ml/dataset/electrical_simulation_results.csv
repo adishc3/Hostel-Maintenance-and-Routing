@@ -1,0 +1,222 @@
+id,complaint,current,simulated,original_category
+2,Urgent: The treadmill in the gym caught fire briefly due to a motor fault. Gym evacuated. Urgent inspection needed. Please prioritize.,General,Electrical,Appliance
+5,The heating system in room 312 is not functioning and the guest is freezing. Urgent fix needed.,General,,Electrical
+17,The air conditioning in room 436 has completely stopped working. Guest is very upset and demanding immediate attention. Please advise on timeline.,General,,Electrical
+18,Urgent: There is a bad odor inside elevator 2. Needs deep cleaning. Please prioritize.,General,,Electrical
+24,The TV remote in room 764 is not working. Guest has requested a replacement.,General,,HVAC
+27,WiFi signal in conference room 2 is very weak for large group usage. This has been reported before.,General,,Electrical
+38,Guest complaint: The TV remote in room 335 is not working. Guest has requested a replacement. Front desk has been notified.,General,,Furniture
+43,Staff report: The bar POS system is running very slowly and crashing during busy hours. Reported by housekeeping staff.,General,,Appliance
+45,Urgent: The HDMI connection port in conference room 5 is not working with guest laptops. Guest has requested an update.,General,,HVAC
+50,The weight bench padding in the gym is torn and needs replacement. Guest is waiting for resolution.,Structural,,HVAC
+66,The kitchen extraction hood above grill 14 has a grease buildup.,General,,Appliance
+99,Please note: WiFi signal in conference room 20 is very weak for large group usage. Front desk has been notified.,General,,Electrical
+109,Guest complaint: The parking CCTV system is down. Security team flagged this as urgent.,General,,Electrical
+110,The steam room temperature in the spa has gone dangerously high. Guests evacuated. Front desk has been notified.,General,,HVAC
+128,Staff report: The laundry room has no ventilation and staff are feeling unwell from chemical fumes. Front desk has been notified.,General,,Appliance
+134,The background music system in the lobby has stopped working. This has been reported before.,General,,HVAC
+139,The main walk-in refrigerator in the restaurant kitchen has stopped working. All food stock at risk. Please prioritize.,General,Electrical,Appliance
+140,Guest complaint: The treadmill in the gym caught fire briefly due to a motor fault. Gym evacuated. Urgent inspection needed. Guest is waiting for resolution.,General,Electrical,Electrical
+144,Urgent: The lobby fountain pump is making a loud rattling sound. This has been reported before.,General,,HVAC
+149,The conference room 7 lighting control panel is not responding. Please prioritize.,General,,Electrical
+152,The portable microphone for conference room 17 has a dead battery and no replacement. Please prioritize.,Structural,,Electrical
+153,Bar refrigerator unit has stopped working. All drinks and stock warm. This has been reported before.,General,Electrical,Appliance
+174,Guest complaint: The spa reception desk computer has crashed and cannot book appointments.,General,,Appliance
+177,The conference room 12 lighting control panel is not responding. Please prioritize.,General,,HVAC
+183,Staff report: One of the pendant lights above the bar area is slightly tilted. Please advise on timeline.,General,,General
+195,Please note: The weight bench padding in the gym is torn and needs replacement. Guest has requested an update.,Structural,,HVAC
+212,One of the pool lane ropes has come undone and is floating loose. Guest is waiting for resolution.,Structural,,Electrical
+216,Guest complaint: One of the pendant lights above the bar area is slightly tilted. Front desk has been notified.,General,,Housekeeping
+224,Parking level 1 exit sign is not illuminated.,General,,Electrical
+225,Staff report: One of the pendant lights above the bar area is slightly tilted. Guest has requested an update.,General,,General
+227,Please note: The kitchen dishwasher is not reaching sanitizing temperature. This has been reported before.,General,,Appliance
+229,The spa relaxation room music system is not functioning. Reported by housekeeping staff.,General,,HVAC
+236,Guest complaint: The spa relaxation room music system is not functioning. Guest has requested an update.,General,,HVAC
+247,Parking level 11 has a strong smoke smell. Fire alarm has not triggered but needs inspection. Please prioritize.,General,,Electrical
+257,The minibar in room 407 stopped cooling. Items inside are warm.,General,,HVAC
+258,Staff report: WiFi signal in conference room 2 is very weak for large group usage. Please prioritize.,General,,Electrical
+269,WiFi signal is very weak in room 587. Guest is unable to connect for work. Reported by housekeeping staff.,General,,Appliance
+271,Urgent: The electric vehicle charging point in bay 6 is showing a fault error. Please prioritize.,General,Electrical,Plumbing
+278,Please note: The coffee machine at the restaurant buffet station is not heating properly. Guest is waiting for resolution.,General,,Appliance
+279,The bar soda gun is not dispensing one of the mixers correctly. This has been reported before.,General,,Electrical
+283,The parking intercom system at the entrance is not working for guests needing assistance. Please advise on timeline.,General,,Appliance
+287,The rowing machine in the gym has a resistance dial that is stuck. Please prioritize.,Structural,,Appliance
+293,Staff report: The safe in room 624 is showing an error code and the guest cannot open it. Guest is waiting for resolution.,General,,HVAC
+325,Staff report: There is a bad odor inside elevator 12. Needs deep cleaning. Please prioritize.,General,,Electrical
+330,The fire alarm in room 356 keeps going off randomly. Guest is panicking. Please send someone urgently. This has been reported before.,General,,Electrical
+366,Staff report: The lobby fountain pump is making a loud rattling sound. Please advise on timeline.,General,,HVAC
+368,Guest complaint: The air conditioning in room 429 has completely stopped working. Guest is very upset and demanding immediate attention. Please advise on timeline.,General,,HVAC
+378,Staff report: The HDMI connection port in conference room 14 is not working with guest laptops. Guest is waiting for resolution.,General,,Electrical
+399,Urgent: The POS terminal at restaurant table 8 is not connecting to the network. Front desk has been notified.,Structural,,HVAC
+401,Guest complaint: The whiteboard in conference room 13 is permanently stained and markers do not show clearly. Please advise on timeline.,General,,HVAC
+402,Air conditioning in room 695 makes a loud rattling noise throughout the night. Please inspect. Front desk has been notified.,General,,Appliance
+407,The laundry room has no ventilation and staff are feeling unwell from chemical fumes. Guest has requested an update.,General,,HVAC
+412,The conference room 14 lighting control panel is not responding. Guest is waiting for resolution.,General,,HVAC
+418,The treadmill in the gym caught fire briefly due to a motor fault. Gym evacuated. Urgent inspection needed. Please advise on timeline.,General,Electrical,Appliance
+419,Urgent: The gym air conditioning is set too cold and cannot be adjusted by guests. Guest has requested an update.,General,,Appliance
+420,Urgent: The TV remote in room 668 is not working. Guest has requested a replacement. This has been reported before.,General,,Appliance
+428,Staff report: Parking level 12 exit sign is not illuminated. Please prioritize.,General,,Appliance
+436,Staff report: Pool filtration system is making an unusual noise. Please inspect. Guest is waiting for resolution.,General,,Electrical
+447,Staff report: The heating system in room 364 is not functioning and the guest is freezing. Urgent fix needed. Reported by housekeeping staff.,General,,HVAC
+455,The spa sauna is not reaching the correct temperature. Stuck at too low.,Structural,,Appliance
+457,Urgent: The conference room 14 lighting control panel is not responding. Please advise on timeline.,General,,Internet/AV
+462,Urgent: The POS terminal at restaurant table 10 is not connecting to the network. Front desk has been notified.,Structural,,Electrical
+463,Urgent: Air conditioning in room 646 makes a loud rattling noise throughout the night. Please inspect. Please advise on timeline.,General,,HVAC
+471,The TV remote in room 527 is not working. Guest has requested a replacement. This has been reported before.,General,,Furniture
+472,Staff report: One of the pendant lights above the bar area is slightly tilted. Front desk has been notified.,General,,Furniture
+476,Urgent: Parking level 3 lighting is very dim. Several fluorescent tubes have gone out. Guest has requested an update.,General,Electrical,Plumbing
+480,Urgent: The gym music system is not working and guests have requested background music. Front desk has been notified.,General,,HVAC
+481,Guest complaint: The safe in room 457 is showing an error code and the guest cannot open it. Please prioritize.,General,,Appliance
+484,Bar background music system is only working on one side of the lounge. Guest has requested an update.,General,,Appliance
+493,Urgent: Garden pathway lighting is not working at night creating a safety hazard for guests.,General,Electrical,Safety/Security
+497,Urgent: The electric vehicle charging point in bay 15 is showing a fault error. Please prioritize.,General,Electrical,Plumbing
+501,Urgent: Garden hedges near the main entrance are overgrown and need trimming. Guest has requested an update.,General,,Electrical
+508,Staff report: The electric vehicle charging point in bay 16 is showing a fault error. Reported by housekeeping staff.,General,Electrical,Plumbing
+510,Guest complaint: The parking intercom system at the entrance is not working for guests needing assistance. Please prioritize.,General,,Electrical
+517,Please note: The bar TV screen showing sports is frozen and cannot be restarted. Reported by housekeeping staff.,General,,Electrical
+520,The bar POS system is running very slowly and crashing during busy hours. Guest is waiting for resolution.,General,,Appliance
+532,The spa reception desk computer has crashed and cannot book appointments. Guest is waiting for resolution.,General,,HVAC
+535,Please note: Parking level 6 has a strong smoke smell. Fire alarm has not triggered but needs inspection. Please prioritize.,General,,Electrical
+541,Several garden pathway lights have blown and need replacing. Please prioritize.,General,,Landscaping
+551,Garden sprinkler heads on the south lawn are not rotating properly. This has been reported before.,General,,Electrical
+555,The heating system in room 233 is not functioning and the guest is freezing. Urgent fix needed. Guest has requested an update.,General,,Electrical
+560,The laundry room industrial dryer has overheated and has a burning smell. Machine stopped. Guest is waiting for resolution.,General,Electrical,HVAC
+562,Guest complaint: Air conditioning in the restaurant dining area is too cold even on lowest setting. Reported by housekeeping staff.,General,,HVAC
+574,Urgent: Treadmill number 10 in the gym is making a loud clicking noise while running. Reported by housekeeping staff.,General,,HVAC
+577,Staff report: The TV remote in room 117 is not working. Guest has requested a replacement. Please prioritize.,General,,HVAC
+584,Staff report: Treadmill number 5 in the gym is making a loud clicking noise while running. Please prioritize.,General,,Appliance
+587,Guest complaint: The spa jacuzzi jets on one side are not working properly. Front desk has been notified.,General,,Appliance
+613,Guest complaint: Treadmill number 20 in the gym is making a loud clicking noise while running. Guest has requested an update.,General,,HVAC
+620,Urgent: Pool filtration system is making an unusual noise. Please inspect. Please prioritize.,General,,Electrical
+623,Staff report: The electric vehicle charging point in bay 16 is showing a fault error. Guest is waiting for resolution.,General,Electrical,Electrical
+628,Urgent: One of the pool lane ropes has come undone and is floating loose. This has been reported before.,Structural,,Electrical
+642,Please note: Room 510 phone is dead and guest cannot make internal calls. This has been reported before.,General,,HVAC
+648,Guest complaint: The elevator call button in the lobby is not illuminating when pressed. Front desk has been notified.,General,,Electrical
+672,Garden pathway lighting is not working at night creating a safety hazard for guests. Guest is waiting for resolution.,General,Electrical,Electrical
+675,WiFi signal in conference room 6 is very weak for large group usage. Guest has requested an update.,General,,HVAC
+681,Parking level 8 exit sign is not illuminated. Front desk has been notified.,General,,Electrical
+693,Urgent: The conference room 15 lighting control panel is not responding.,General,,Internet/AV
+698,Please note: The spa sauna is not reaching the correct temperature. Stuck at too low. Please advise on timeline.,Structural,,HVAC
+706,Staff report: The gym air conditioning is set too cold and cannot be adjusted by guests.,General,,HVAC
+725,Staff report: The kitchen extraction hood above grill 8 has a grease buildup. Front desk has been notified.,General,,Appliance
+731,The lobby phone at the concierge desk is showing no dial tone. Please advise on timeline.,General,,Electrical
+732,Bar background music system is only working on one side of the lounge. Reported by housekeeping staff.,General,,Appliance
+733,Please note: Room 228 phone is dead and guest cannot make internal calls. This has been reported before.,General,,Appliance
+734,Guest complaint: The lobby fountain pump is making a loud rattling sound. This has been reported before.,General,,Electrical
+738,Urgent: The spa jacuzzi jets on one side are not working properly. Please prioritize.,General,,Appliance
+740,Guest complaint: The lobby TV screens showing hotel information are frozen and not updating. Guest is waiting for resolution.,General,,Electrical
+746,Guest complaint: Garden pathway lighting is not working at night creating a safety hazard for guests. Guest has requested an update.,General,Electrical,Electrical
+754,Rats spotted in the kitchen storage area. Pest control needed immediately. Guest is waiting for resolution.,General,,Appliance
+761,Please note: The heating system in room 711 is not functioning and the guest is freezing. Urgent fix needed. Front desk has been notified.,General,,HVAC
+768,Staff report: The stationary bike number 19 has a loose seat that wobbles during use. Please prioritize.,Structural,,HVAC
+786,Staff report: Garden pathway lighting is not working at night creating a safety hazard for guests. Front desk has been notified.,General,Electrical,Safety/Security
+787,Urgent: The conference room 1 lighting control panel is not responding. Front desk has been notified.,General,,Furniture
+795,Please note: Several garden pathway lights have blown and need replacing. This has been reported before.,General,,Landscaping
+802,The TV remote in room 110 is not working. Guest has requested a replacement. Front desk has been notified.,General,,Appliance
+809,Guest in room 426 reported cockroaches in the room. Immediate pest control required. This has been reported before.,General,,HVAC
+811,The air conditioning in room 667 has completely stopped working. Guest is very upset and demanding immediate attention. Front desk has been notified.,General,,Electrical
+817,Urgent: The elevator call button in the lobby is not illuminating when pressed. Please prioritize.,General,,HVAC
+836,Guest complaint: Air conditioning in room 144 makes a loud rattling noise throughout the night. Please inspect. Please advise on timeline.,General,,HVAC
+846,Please note: The lobby phone at the concierge desk is showing no dial tone. Please prioritize.,General,,HVAC
+849,Please note: The treadmill in the gym caught fire briefly due to a motor fault. Gym evacuated. Urgent inspection needed. Front desk has been notified.,General,Electrical,HVAC
+855,Parking level 2 lighting is very dim. Several fluorescent tubes have gone out.,General,Electrical,Plumbing
+863,Staff report: The bar ice machine is not producing enough ice for evening service. Please advise on timeline.,General,,Appliance
+864,Guest complaint: The buffet heating station lamp is not maintaining correct temperature. This has been reported before.,General,,Electrical
+865,The background music system in the lobby has stopped working. Please prioritize.,General,,HVAC
+867,Pool lights are not working at night making it unsafe for evening swimmers. This has been reported before.,General,Electrical,Pool/Water Feature
+876,WiFi signal in conference room 10 is very weak for large group usage. Reported by housekeeping staff.,General,,Electrical
+900,The bar POS system is running very slowly and crashing during busy hours. Front desk has been notified.,General,,Electrical
+904,Guest complaint: The main walk-in refrigerator in the restaurant kitchen has stopped working. All food stock at risk. Reported by housekeeping staff.,General,Electrical,Appliance
+912,Staff report: Parking level 4 lighting is very dim. Several fluorescent tubes have gone out. Please advise on timeline.,General,Electrical,Appliance
+916,Please note: One of the pendant lights above the bar area is slightly tilted. Please advise on timeline.,General,,Housekeeping
+924,Urgent: The fire exit sign in the lobby is not lit. Safety compliance issue — urgent fix needed.,General,,Electrical
+938,Urgent: Parking bay marking lines on level 10 are faded and barely visible. This has been reported before.,General,,Appliance
+939,The laundry room has no ventilation and staff are feeling unwell from chemical fumes. Please prioritize.,General,,HVAC
+942,Please note: Air conditioning in the restaurant dining area is too cold even on lowest setting. This has been reported before.,General,,Appliance
+943,Treadmill number 10 in the gym is making a loud clicking noise while running. This has been reported before.,General,,HVAC
+945,Urgent: The laundry room has no ventilation and staff are feeling unwell from chemical fumes. Please advise on timeline.,General,,Appliance
+947,Urgent: Room 316 phone is dead and guest cannot make internal calls. This has been reported before.,General,,HVAC
+952,Staff report: The spa jacuzzi jets on one side are not working properly. Reported by housekeeping staff.,General,,HVAC
+959,Parking bay marking lines on level 10 are faded and barely visible. Guest has requested an update.,General,,Electrical
+960,Please note: Pool lights are not working at night making it unsafe for evening swimmers. This has been reported before.,General,Electrical,Pool/Water Feature
+962,Air conditioning in the lobby feels very warm. Temperature adjustment needed.,General,,Electrical
+967,Guest complaint: The fire alarm in room 389 keeps going off randomly. Guest is panicking. Please send someone urgently. Guest is waiting for resolution.,General,,HVAC
+968,Staff report: The treadmill in the gym caught fire briefly due to a motor fault. Gym evacuated. Urgent inspection needed. Please advise on timeline.,General,Electrical,Appliance
+971,Please note: Bar refrigerator unit has stopped working. All drinks and stock warm.,General,Electrical,Appliance
+980,WiFi signal is very weak in room 292. Guest is unable to connect for work. This has been reported before.,General,,HVAC
+986,Staff report: Guest in room 188 reported cockroaches in the room. Immediate pest control required. Guest is waiting for resolution.,General,,HVAC
+1011,Staff report: The pool ladder on the deep end side is loose and wobbles when used. This has been reported before.,Structural,,Electrical
+1013,Staff report: WiFi signal is very weak in room 475. Guest is unable to connect for work. Please advise on timeline.,General,,Appliance
+1015,Urgent: One of the pendant lights above the bar area is slightly tilted. Guest is waiting for resolution.,General,,Furniture
+1016,Urgent: The lobby entrance mat is soaking wet and slippery due to rain. Needs replacing. Front desk has been notified.,General,,HVAC
+1018,CCTV camera at the main lobby entrance has stopped recording. Security concern. Please prioritize.,General,,Electrical
+1021,Urgent: Parking level 9 exit sign is not illuminated. Please advise on timeline.,General,,Appliance
+1028,Staff report: The bar ambient lighting control panel is unresponsive. Guest is waiting for resolution.,General,,Electrical
+1044,Urgent: The air conditioning in room 656 has completely stopped working. Guest is very upset and demanding immediate attention. This has been reported before.,General,,HVAC
+1048,Staff report: The main walk-in refrigerator in the restaurant kitchen has stopped working. All food stock at risk. Front desk has been notified.,General,Electrical,Appliance
+1059,Please note: The oven in kitchen station 11 has an uneven temperature across shelves. Front desk has been notified.,General,,Appliance
+1062,Please note: Treadmill number 10 in the gym is making a loud clicking noise while running. Reported by housekeeping staff.,General,,HVAC
+1063,Please note: The lobby phone at the concierge desk is showing no dial tone. Please advise on timeline.,General,,HVAC
+1066,One of the gas burners in the kitchen caught fire briefly. Extinguished but needs inspection. Guest is waiting for resolution.,General,,Appliance
+1067,The pool ladder on the deep end side is loose and wobbles when used. This has been reported before.,Structural,,Electrical
+1071,The restaurant music system is not working in the far dining section. Please prioritize.,General,,Electrical
+1072,Guest in room 157 reported cockroaches in the room. Immediate pest control required. Please advise on timeline.,General,,HVAC
+1080,Guest complaint: Parking level 8 exit sign is not illuminated. Please advise on timeline.,General,,Electrical
+1081,Guest complaint: The safe in room 693 is showing an error code and the guest cannot open it. Reported by housekeeping staff.,General,,HVAC
+1083,Please note: The background music system in the lobby has stopped working. This has been reported before.,General,,HVAC
+1092,Please note: The sauna heating element has malfunctioned and is producing smoke.,General,Electrical,HVAC
+1100,Staff report: Pool lights are not working at night making it unsafe for evening swimmers. This has been reported before.,General,Electrical,Pool/Water Feature
+1109,The minibar in room 103 stopped cooling. Items inside are warm. Please prioritize.,General,,HVAC
+1116,Guest complaint: The main walk-in refrigerator in the restaurant kitchen has stopped working. All food stock at risk. Guest has requested an update.,General,Electrical,Appliance
+1119,Please note: Several garden pathway lights have blown and need replacing. Front desk has been notified.,General,,General
+1139,The TV remote in room 484 is not working. Guest has requested a replacement. Front desk has been notified.,General,,Internet/AV
+1145,The spa relaxation room music system is not functioning.,General,,HVAC
+1149,Staff report: The stationary bike number 12 has a loose seat that wobbles during use. Please prioritize.,Structural,,Appliance
+1151,Please note: The lobby TV screens showing hotel information are frozen and not updating. Guest has requested an update.,General,,HVAC
+1163,Staff report: The coffee machine at the restaurant buffet station is not heating properly. Guest is waiting for resolution.,General,,Appliance
+1173,Urgent: The conference room 15 lighting control panel is not responding. Please advise on timeline.,General,,Electrical
+1176,Guest complaint: The lobby phone at the concierge desk is showing no dial tone. Please advise on timeline.,General,,HVAC
+1179,The TV remote in room 338 is not working. Guest has requested a replacement. Guest is waiting for resolution.,General,,Plumbing
+1220,Parking bay marking lines on level 6 are faded and barely visible. Reported by housekeeping staff.,General,,Electrical
+1223,Staff report: The background music system in the lobby has stopped working.,General,,Electrical
+1238,Guest complaint: The conference room 4 lighting control panel is not responding. Please advise on timeline.,General,,Internet/AV
+1243,The treadmill in the gym caught fire briefly due to a motor fault. Gym evacuated. Urgent inspection needed. Guest has requested an update.,General,Electrical,Appliance
+1251,Please note: Rats spotted in the kitchen storage area. Pest control needed immediately.,General,,Appliance
+1272,Bar refrigerator unit has stopped working. All drinks and stock warm. Please advise on timeline.,General,Electrical,Appliance
+1285,"A glass shelf behind the bar collapsed, breaking bottles and glassware. Staff safety risk. Guest is waiting for resolution.",Structural,,Appliance
+1290,Garden pathway lighting is not working at night creating a safety hazard for guests. Please advise on timeline.,General,Electrical,Plumbing
+1295,Staff report: The lobby entrance mat is soaking wet and slippery due to rain. Needs replacing. Front desk has been notified.,General,,Electrical
+1298,The coffee machine at the restaurant buffet station is not heating properly. This has been reported before.,General,,Electrical
+1316,The air conditioning in room 461 has completely stopped working. Guest is very upset and demanding immediate attention. Reported by housekeeping staff.,General,,Electrical
+1319,The rowing machine in the gym has a resistance dial that is stuck. Reported by housekeeping staff.,Structural,,Appliance
+1322,The TV remote in room 486 is not working. Guest has requested a replacement. Front desk has been notified.,General,,Internet/AV
+1324,Staff report: The laundry room has no ventilation and staff are feeling unwell from chemical fumes. Guest has requested an update.,General,,Appliance
+1327,The safe in room 244 is showing an error code and the guest cannot open it. Please prioritize.,General,,Appliance
+1336,The conference room 1 audio system is producing loud feedback and cannot be used. This has been reported before.,General,,HVAC
+1343,Urgent: Air conditioning in the lobby feels very warm. Temperature adjustment needed. Front desk has been notified.,General,,HVAC
+1358,Please note: The bar ambient lighting control panel is unresponsive. Guest has requested an update.,General,,Electrical
+1359,One of the pendant lights above the bar area is slightly tilted. Please advise on timeline.,General,,Housekeeping
+1363,The conference room 13 lighting control panel is not responding. Please prioritize.,General,,Electrical
+1373,Please note: Conference room 20 phone conference system is not connecting to external lines. Guest is waiting for resolution.,General,,Electrical
+1378,Parking level 4 lighting is very dim. Several fluorescent tubes have gone out.,General,Electrical,Appliance
+1382,Staff report: The fire exit sign in the lobby is not lit. Safety compliance issue — urgent fix needed. Please prioritize.,General,,Electrical
+1383,The main walk-in refrigerator in the restaurant kitchen has stopped working. All food stock at risk. This has been reported before.,General,Electrical,Appliance
+1392,Urgent: Laundry press machine 13 is not reaching correct temperature. Reported by housekeeping staff.,General,,Appliance
+1393,The bar TV screen showing sports is frozen and cannot be restarted. Guest has requested an update.,General,,Appliance
+1400,The POS terminal at restaurant table 9 is not connecting to the network. Please prioritize.,Structural,,Appliance
+1410,Please note: The weight bench padding in the gym is torn and needs replacement. Please prioritize.,Structural,,Appliance
+1414,Please note: Parking level 5 lighting is very dim. Several fluorescent tubes have gone out. Please prioritize.,General,Electrical,Plumbing
+1420,Urgent: One of the pendant lights above the bar area is slightly tilted.,General,,General
+1433,Staff report: The projector in conference room 12 has completely stopped working mid-presentation. Corporate client waiting. Guest has requested an update.,General,,HVAC
+1436,Staff report: Parking bay marking lines on level 3 are faded and barely visible. This has been reported before.,General,,Appliance
+1437,Urgent: The laundry room dryer 3 is taking twice as long as normal to dry loads.,General,,Appliance
+1443,The lobby fountain pump is making a loud rattling sound. Front desk has been notified.,General,,Electrical
+1455,Urgent: The hairdryer in room 531 is not working. Guest needs replacement. Please prioritize.,General,Electrical,HVAC
+1469,Urgent: Garden pathway lighting is not working at night creating a safety hazard for guests. Reported by housekeeping staff.,General,Electrical,Plumbing
+1477,Please note: Treadmill number 18 in the gym is making a loud clicking noise while running. This has been reported before.,General,,HVAC
+1479,Please note: The gym has no air conditioning in extreme heat. Unsafe for guests exercising. Guest is waiting for resolution.,General,,HVAC
+1482,The restaurant music system is not working in the far dining section. Please advise on timeline.,General,,Electrical
+1488,The fire exit sign in the lobby is not lit. Safety compliance issue — urgent fix needed.,General,,Electrical
+1494,The bar ambient lighting control panel is unresponsive. Front desk has been notified.,General,,Furniture
+1495,Guest complaint: The HDMI connection port in conference room 2 is not working with guest laptops. Front desk has been notified.,General,,HVAC
+1500,Urgent: Room 762 phone is dead and guest cannot make internal calls. Guest has requested an update.,General,,HVAC

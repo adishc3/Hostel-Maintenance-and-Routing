@@ -1,0 +1,81 @@
+id,complaint,category,hostel_category
+1005,Please note: Window in room 222 cannot be opened or closed properly. Latch is broken. Please prioritize.,Furniture,Structural
+196,Urgent: The ironing board in room 720 has a broken leg and is unsafe to use. Please prioritize.,HVAC,Structural
+978,Please note: Curtains in room 510 are not closing properly. The track seems broken. This has been reported before.,Plumbing,Structural
+231,Guest complaint: Pool area hose connection is broken and groundskeeping cannot clean the deck. This has been reported before.,Electrical,Structural
+674,Staff report: Window in room 650 cannot be opened or closed properly. Latch is broken. Guest is waiting for resolution.,Internet/AV,Structural
+207,One of the bar refrigerator doors is not sealing properly. Please advise on timeline.,Internet/AV,Structural
+581,Please note: The lobby sofa near window 13 has a visible stain on the cushion. Please prioritize.,Housekeeping,Structural
+1401,Please note: The booth seating fabric at table 16 is torn and patched roughly. Guest is waiting for resolution.,Furniture,Structural
+1480,The ironing board in room 439 has a broken leg and is unsafe to use. Guest has requested an update.,Internet/AV,Structural
+1435,Urgent: Kitchen walls behind the cooking line have grease staining despite cleaning. Front desk has been notified.,Housekeeping,Structural
+20,Guest complaint: The booth seating fabric at table 9 is torn and patched roughly. Reported by housekeeping staff.,Furniture,Structural
+605,"A glass shelf behind the bar collapsed, breaking bottles and glassware. Staff safety risk. Reported by housekeeping staff.",Safety/Security,Structural
+1152,Several pool tiles have minor chips along the waterline. Not urgent but needs scheduling. This has been reported before.,Landscaping,Structural
+201,Please note: Elevator 16 is very slow and taking several minutes to arrive on each floor.,Elevator,Structural
+1431,Guest complaint: Part of the rooftop railing has come loose. Safety risk — area must be cordoned off immediately. Guest has requested an update.,Pool/Water Feature,Structural
+686,Guest complaint: The parking barrier arm is stuck in the down position and vehicles cannot exit. Emergency.,Safety/Security,Structural
+1351,The restaurant entrance mat is frayed at the edges and looks worn. Reported by housekeeping staff.,General,Structural
+272,One of the lobby artwork frames is hanging slightly crooked. Reported by housekeeping staff.,Housekeeping,Structural
+1459,Guest complaint: The luggage trolley wheels on 3 of the carts are broken and hard to steer. Reported by housekeeping staff.,General,Structural
+161,Please note: The main door lock in room 822 is jammed and the guest cannot enter. Urgent locksmith needed. This has been reported before.,HVAC,Structural
+746,Guest complaint: Garden pathway lighting is not working at night creating a safety hazard for guests. Guest has requested an update.,Electrical,Electrical
+1467,A kitchen staff member reported electric shock from the main oven panel. Take oven out of service. Guest is waiting for resolution.,Appliance,Electrical
+1249,Please note: Corridor on floor 6 has a strong burning smell near the electrical cupboard. Guest has requested an update.,Safety/Security,Electrical
+558,Please note: Corridor lights on floor 12 are flickering throughout the night disturbing guests. Please advise on timeline.,Electrical,Electrical
+904,Guest complaint: The main walk-in refrigerator in the restaurant kitchen has stopped working. All food stock at risk. Reported by housekeeping staff.,Appliance,Electrical
+329,Guest complaint: Rooftop bar area outdoor lights are not working for evening service. Reported by housekeeping staff.,Electrical,Electrical
+1406,Guest complaint: Rooftop bar area outdoor lights are not working for evening service. Front desk has been notified.,Landscaping,Electrical
+508,Staff report: The electric vehicle charging point in bay 16 is showing a fault error. Reported by housekeeping staff.,Plumbing,Electrical
+956,Please note: Main kitchen extraction fan has stopped working. Kitchen filling with smoke during service. Guest has requested an update.,Safety/Security,Electrical
+1368,Please note: Corridor lights on floor 2 are flickering throughout the night disturbing guests. Guest is waiting for resolution.,Electrical,Electrical
+203,Corridor on floor 5 has a strong burning smell near the electrical cupboard. Please advise on timeline.,Safety/Security,Electrical
+583,Rooftop pool pump has stopped working. Water turning stagnant. Guest has requested an update.,Structural,Electrical
+165,The sauna heating element has malfunctioned and is producing smoke. This has been reported before.,Pool/Water Feature,Electrical
+614,Rooftop pool pump has stopped working. Water turning stagnant. Reported by housekeeping staff.,Safety/Security,Electrical
+244,Corridor lights on floor 1 are flickering throughout the night disturbing guests. Guest has requested an update.,Electrical,Electrical
+334,The bedside lamp on the left side in room 268 does not turn on. Front desk has been notified.,Furniture,Electrical
+1242,Guest complaint: Motion sensor lights on floor 6 corridor are not turning on when guests walk past. Front desk has been notified.,Electrical,Electrical
+970,Please note: The garden fountain is not running. Pump may have stopped working. Guest is waiting for resolution.,General,Electrical
+930,Guest complaint: Main kitchen extraction fan has stopped working. Kitchen filling with smoke during service. Guest has requested an update.,Appliance,Electrical
+171,Guest complaint: The laundry room extraction fan is noisy and staff have complained. Guest has requested an update.,Appliance,Electrical
+430,Urgent: The laundry room water softener unit needs a salt refill urgently. Guest has requested an update.,Internet/AV,General
+1089,Urgent: The toilet flush in room 331 keeps running constantly and not stopping. This has been reported before.,Appliance,General
+13,Guest complaint: The pool signage board is faded and text is barely readable. Guest is waiting for resolution.,General,General
+1153,Urgent: The wooden garden benches near the pond are weathered and need re-staining. Guest has requested an update.,Structural,General
+217,Elevator 7 suddenly dropped before stopping. Guest reported feeling unsafe. Guest has requested an update.,Safety/Security,General
+592,Please note: The laundry room water softener unit needs a salt refill urgently. Please prioritize.,Internet/AV,General
+1500,Urgent: Room 762 phone is dead and guest cannot make internal calls. Guest has requested an update.,HVAC,General
+1392,Urgent: Laundry press machine 13 is not reaching correct temperature. Reported by housekeeping staff.,Appliance,General
+921,Urgent: The laundry room dryer 5 is taking twice as long as normal to dry loads. Guest is waiting for resolution.,Furniture,General
+293,Staff report: The safe in room 624 is showing an error code and the guest cannot open it. Guest is waiting for resolution.,HVAC,General
+22,Staff report: The minibar in room 756 stopped cooling. Items inside are warm. Please advise on timeline.,Plumbing,General
+282,The bar ice machine is not producing enough ice for evening service. Please advise on timeline.,Internet/AV,General
+210,Guest complaint: Guest in room 311 reported cockroaches in the room. Immediate pest control required. Guest has requested an update.,Safety/Security,General
+510,Guest complaint: The parking intercom system at the entrance is not working for guests needing assistance. Please prioritize.,Electrical,General
+472,Staff report: One of the pendant lights above the bar area is slightly tilted. Front desk has been notified.,Furniture,General
+990,Urgent: Air conditioning in the lobby feels very warm. Temperature adjustment needed. Please prioritize.,General,General
+7,Guest complaint: The fire exit sign in the lobby is not lit. Safety compliance issue — urgent fix needed.,Structural,General
+460,Urgent: The bar ice machine is not producing enough ice for evening service. Please advise on timeline.,Furniture,General
+1119,Please note: Several garden pathway lights have blown and need replacing. Front desk has been notified.,General,General
+379,Guest complaint: The conference room 2 audio system is producing loud feedback and cannot be used. This has been reported before.,Plumbing,General
+822,"Please note: There is water leaking from under the bathroom sink in room 601, flooding the floor. Please advise on timeline.",Structural,Plumbing
+946,Please note: Toilet in room 454 is completely blocked and overflowing. Guest is very distressed. Please prioritize.,Plumbing,Plumbing
+563,Ceiling has a minor yellowish water stain in room 320 from old leak — already fixed but mark remains. Guest has requested an update.,Housekeeping,Plumbing
+1193,Hot water is not coming in the bathroom of room 447. Guest has been waiting 30 minutes. Guest has requested an update.,Plumbing,Plumbing
+106,Urgent: Sewage smell is coming strongly from the bathroom drain in room 163. Unbearable for guest.,Plumbing,Plumbing
+728,Staff report: Ice machine in the floor 11 corridor is leaking water onto the hallway floor. Guest is waiting for resolution.,Appliance,Plumbing
+1118,The bar draft beer system has a gas leak. Bar evacuated. Urgent technician needed. Reported by housekeeping staff.,Structural,Plumbing
+1446,Bathtub drain in room 714 is very slow. Water pools during shower.,Appliance,Plumbing
+483,Please note: The pool drain cover is broken and poses a serious entrapment risk. Close pool immediately.,Pool/Water Feature,Plumbing
+878,Urgent: A guest slipped on a wet spa floor due to a drain blockage. Injury reported. Guest is waiting for resolution.,HVAC,Plumbing
+635,A pipe burst under the restaurant kitchen sink. Water is everywhere and kitchen cannot operate. Please advise on timeline.,Safety/Security,Plumbing
+200,Toilet in room 798 is completely blocked and overflowing. Guest is very distressed. This has been reported before.,Safety/Security,Plumbing
+1257,The pool drain cover is broken and poses a serious entrapment risk. Close pool immediately. Guest has requested an update.,Pool/Water Feature,Plumbing
+83,Urgent: Toilet in room 357 is completely blocked and overflowing. Guest is very distressed. Please advise on timeline.,Plumbing,Plumbing
+426,The hand wash sink in the kitchen prep area has very low water pressure. This has been reported before.,Furniture,Plumbing
+1493,Room 103 has a water leak from the ceiling. Water is dripping on the bed. Guest relocated but needs immediate repair. Guest is waiting for resolution.,HVAC,Plumbing
+1141,Please note: The laundry room floor drain cover is cracked and needs replacing. Guest has requested an update.,Structural,Plumbing
+124,Room 380 has no hot water at all. Guest checked in an hour ago and is requesting urgent assistance. Guest has requested an update.,Plumbing,Plumbing
+1305,Staff report: Ceiling has a minor yellowish water stain in room 473 from old leak — already fixed but mark remains. Please prioritize.,Furniture,Plumbing
+422,Hot water takes more than 10 minutes to arrive in the bathroom of room 722. Please prioritize.,Plumbing,Plumbing
