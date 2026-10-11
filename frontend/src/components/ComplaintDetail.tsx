@@ -1,6 +1,6 @@
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import { ArrowLeft, Building2, CalendarDays, MapPin, UserRound, Wrench } from "lucide-react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { ApiError, api } from "../api/client";
 import { useAuth } from "../auth/AuthContext";
 import { ErrorNotice, Loading } from "./Feedback";
@@ -18,6 +18,7 @@ const allStatuses: ComplaintStatus[] = ["Pending", "In Progress", "Resolved", "R
 export function ComplaintDetail() {
   const { id = "" } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const { user } = useAuth();
   const [complaint, setComplaint] = useState<Complaint | null>(null);
   const [loading, setLoading] = useState(true);
@@ -26,7 +27,9 @@ export function ComplaintDetail() {
   const [nextStatus, setNextStatus] = useState<ComplaintStatus>("Pending");
   const [note, setNote] = useState("");
   const [staffId, setStaffId] = useState("");
-  const [success, setSuccess] = useState("");
+  const [success, setSuccess] = useState(
+    typeof location.state?.notice === "string" ? location.state.notice : "",
+  );
 
   async function loadComplaint() {
     setLoading(true);
@@ -98,7 +101,7 @@ export function ComplaintDetail() {
       <button className="back-button" type="button" onClick={() => navigate(-1)}>
         <ArrowLeft size={16} aria-hidden="true" /> Back to complaints
       </button>
-      {error && <ErrorNotice message={error} />}
+      {error && <ErrorNotice message={error} onRetry={() => void loadComplaint()} />}
       {success && <p className="success-notice" role="status">{success}</p>}
       <article className="detail-panel">
         <div className="detail-heading">

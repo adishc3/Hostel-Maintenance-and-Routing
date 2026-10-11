@@ -4,13 +4,18 @@ React + Vite client for the FastAPI authentication and complaint APIs.
 
 ## Run locally
 
-1. Start the backend from the repository root:
+1. Configure and start the backend from the repository root:
 
    ```powershell
+   .\.venv\Scripts\python.exe -m pip install -r backend\requirements.txt
+   $env:JWT_SECRET_KEY = (.\.venv\Scripts\python.exe -c "import secrets; print(secrets.token_urlsafe(48))")
+   $env:MONGODB_URI = "mongodb+srv://<database-user>:<url-encoded-password>@<cluster-host>/?appName=<app-name>"
+   $env:MONGODB_DATABASE = "smart_hostel"
+   $env:BACKEND_CORS_ORIGINS = "http://localhost:5173"
    .\.venv\Scripts\python.exe -m uvicorn app.main:app --app-dir backend --reload
    ```
 
-   Configure `JWT_SECRET_KEY` and a reachable MongoDB database in the backend environment before signing in or using complaint operations.
+   `JWT_SECRET_KEY` must be a private, high-entropy value. Generate it with the shown `secrets.token_urlsafe(48)` command; never commit it or expose it to Vite. The backend fails safely with an explicit `503` when the secret is missing. See [backend/README.md](../backend/README.md) for the privileged-account provisioning process.
 
 2. In another terminal, install and start the frontend:
 

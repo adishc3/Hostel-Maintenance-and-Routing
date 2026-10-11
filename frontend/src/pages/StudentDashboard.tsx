@@ -12,7 +12,8 @@ export function StudentDashboard() {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [error, setError] = useState("");
+  const [loadError, setLoadError] = useState("");
+  const [submitError, setSubmitError] = useState("");
   const [success, setSuccess] = useState("");
   const [description, setDescription] = useState("");
   const [hostel, setHostel] = useState("");
@@ -20,13 +21,13 @@ export function StudentDashboard() {
 
   const loadComplaints = useCallback(async () => {
     setLoading(true);
-    setError("");
+    setLoadError("");
     try {
       const result = await api.myComplaints();
       setComplaints(result.items);
       setTotal(result.total);
     } catch (caught) {
-      setError(caught instanceof ApiError ? caught.message : "Could not load your complaints.");
+      setLoadError(caught instanceof ApiError ? caught.message : "Could not load your complaints.");
     } finally {
       setLoading(false);
     }
@@ -39,7 +40,7 @@ export function StudentDashboard() {
   async function submitComplaint(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setSaving(true);
-    setError("");
+    setSubmitError("");
     setSuccess("");
     const payload: ComplaintCreateRequest = {
       complaint: description.trim(),
@@ -53,9 +54,11 @@ export function StudentDashboard() {
       setRoom("");
       setSuccess("Your complaint has been submitted and routed to the maintenance team.");
       await loadComplaints();
-      navigate(`/app/complaints/${created.id}`);
+      navigate(`/app/complaints/${created.id}`, {
+        state: { notice: "Your complaint was submitted successfully." },
+      });
     } catch (caught) {
-      setError(caught instanceof ApiError ? caught.message : "Could not submit your complaint.");
+      setSubmitError(caught instanceof ApiError ? caught.message : "Could not submit your complaint.");
     } finally {
       setSaving(false);
     }
@@ -67,7 +70,8 @@ export function StudentDashboard() {
         <div><p className="eyebrow">STUDENT WORKSPACE</p><h1>Your space, taken care of.</h1><p>Tell us what needs attention. We’ll route it to the right team.</p></div>
         <span className="heading-icon"><Sparkles size={22} /></span>
       </div>
-      {error && <ErrorNotice message={error} onRetry={() => void loadComplaints()} />}
+      {loadError && <ErrorNotice message={loadError} onRetry={() => void loadComplaints()} />}
+      {submitError && <ErrorNotice message={submitError} />}
       {success && <p className="success-notice" role="status">{success}</p>}
       <div className="student-grid">
         <form className="form-panel" onSubmit={submitComplaint}>
