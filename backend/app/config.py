@@ -11,6 +11,8 @@ class Settings(BaseSettings):
     backend_cors_origins: str = Field(default="http://localhost:5173", validation_alias="BACKEND_CORS_ORIGINS")
     app_name: str = "Smart Hostel Backend"
     app_environment: str = Field(default="development", validation_alias="APP_ENVIRONMENT")
+    jwt_secret_key: str = Field(default="", validation_alias="JWT_SECRET_KEY")
+    jwt_access_token_minutes: int = Field(default=60, validation_alias="JWT_ACCESS_TOKEN_MINUTES", gt=0)
 
     model_config = SettingsConfigDict(
         env_file=(

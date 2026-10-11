@@ -1,0 +1,609 @@
+{
+  "purpose": "Diagnose category errors and compare alternatives without replacing production artifacts.",
+  "scikit_learn_version": "1.9.0",
+  "random_state": 42,
+  "dataset_rows_after_exact_deduplication": 1450,
+  "class_counts": {
+    "Electrical": 185,
+    "General": 695,
+    "Plumbing": 228,
+    "Structural": 342
+  },
+  "split": {
+    "development_rows": 1160,
+    "fit_rows": 928,
+    "validation_rows": 232,
+    "reserved_final_test_rows": 290,
+    "development_validation": "stratified 80/20 within the original 80% development partition",
+    "final_test": "the original stratified 20% partition, not used for model selection"
+  },
+  "preprocessing_facts": {
+    "stopwords_removed": [
+      "doesn",
+      "doesn't",
+      "don",
+      "don't",
+      "isn",
+      "isn't",
+      "no",
+      "nor",
+      "not"
+    ],
+    "socket_in_current_active_vocabulary": false,
+    "source_category_to_rule_label": {
+      "Electrical": {
+        "Appliance": 31,
+        "Electrical": 29,
+        "Elevator": 3,
+        "Furniture": 17,
+        "General": 4,
+        "HVAC": 25,
+        "Housekeeping": 1,
+        "Internet/AV": 16,
+        "Landscaping": 1,
+        "Pest Control": 6,
+        "Plumbing": 29,
+        "Pool/Water Feature": 4,
+        "Safety/Security": 19,
+        "Structural": 0
+      },
+      "General": {
+        "Appliance": 73,
+        "Electrical": 73,
+        "Elevator": 14,
+        "Furniture": 73,
+        "General": 64,
+        "HVAC": 64,
+        "Housekeeping": 44,
+        "Internet/AV": 64,
+        "Landscaping": 18,
+        "Pest Control": 3,
+        "Plumbing": 68,
+        "Pool/Water Feature": 24,
+        "Safety/Security": 55,
+        "Structural": 58
+      },
+      "Plumbing": {
+        "Appliance": 22,
+        "Electrical": 31,
+        "Elevator": 0,
+        "Furniture": 9,
+        "General": 20,
+        "HVAC": 9,
+        "Housekeeping": 4,
+        "Internet/AV": 10,
+        "Landscaping": 1,
+        "Pest Control": 1,
+        "Plumbing": 56,
+        "Pool/Water Feature": 7,
+        "Safety/Security": 35,
+        "Structural": 23
+      },
+      "Structural": {
+        "Appliance": 23,
+        "Electrical": 47,
+        "Elevator": 35,
+        "Furniture": 22,
+        "General": 54,
+        "HVAC": 11,
+        "Housekeeping": 34,
+        "Internet/AV": 4,
+        "Landscaping": 17,
+        "Pest Control": 0,
+        "Plumbing": 11,
+        "Pool/Water Feature": 6,
+        "Safety/Security": 17,
+        "Structural": 61
+      }
+    },
+    "term_counts_by_rule_label": {
+      "electric": {
+        "Electrical": 39
+      },
+      "power": {
+        "Electrical": 10
+      },
+      "socket": {},
+      "light": {
+        "Electrical": 49,
+        "General": 25,
+        "Structural": 22
+      },
+      "fan": {
+        "Electrical": 22
+      },
+      "hinge": {
+        "Structural": 13
+      },
+      "door": {
+        "General": 47,
+        "Structural": 34,
+        "Plumbing": 6
+      }
+    }
+  },
+  "validation_results": {
+    "baseline_word_tfidf": {
+      "accuracy": 0.978448275862069,
+      "macro_f1": 0.9743426712316905,
+      "weighted_f1": 0.9780500938813566,
+      "per_class": {
+        "Electrical": {
+          "precision": 1.0,
+          "recall": 0.8666666666666667,
+          "f1": 0.9285714285714286,
+          "support": 30
+        },
+        "General": {
+          "precision": 0.9568965517241379,
+          "recall": 1.0,
+          "f1": 0.9779735682819384,
+          "support": 111
+        },
+        "Plumbing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 36
+        },
+        "Structural": {
+          "precision": 1.0,
+          "recall": 0.9818181818181818,
+          "f1": 0.9908256880733946,
+          "support": 55
+        }
+      },
+      "confusion_matrix": [
+        [
+          26,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          111,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          36,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          54
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "Electrical",
+        "General",
+        "Plumbing",
+        "Structural"
+      ],
+      "probe_predictions": {
+        "no electricity / power socket": "General",
+        "broken door hinge": "General",
+        "ceiling fan": "General",
+        "hallway light / socket": "General"
+      }
+    },
+    "balanced_word_tfidf": {
+      "accuracy": 0.9827586206896551,
+      "macro_f1": 0.9801984866640039,
+      "weighted_f1": 0.982763928996093,
+      "per_class": {
+        "Electrical": {
+          "precision": 1.0,
+          "recall": 0.9333333333333333,
+          "f1": 0.9655172413793104,
+          "support": 30
+        },
+        "General": {
+          "precision": 0.990990990990991,
+          "recall": 0.990990990990991,
+          "f1": 0.990990990990991,
+          "support": 111
+        },
+        "Plumbing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 36
+        },
+        "Structural": {
+          "precision": 0.9473684210526315,
+          "recall": 0.9818181818181818,
+          "f1": 0.9642857142857143,
+          "support": 55
+        }
+      },
+      "confusion_matrix": [
+        [
+          28,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          110,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          36,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          54
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "Electrical",
+        "General",
+        "Plumbing",
+        "Structural"
+      ],
+      "probe_predictions": {
+        "no electricity / power socket": "Electrical",
+        "broken door hinge": "General",
+        "ceiling fan": "General",
+        "hallway light / socket": "Electrical"
+      }
+    },
+    "expanded_word_ngrams": {
+      "accuracy": 0.9698275862068966,
+      "macro_f1": 0.9622867228431911,
+      "weighted_f1": 0.9688321828028738,
+      "per_class": {
+        "Electrical": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8888888888888888,
+          "support": 30
+        },
+        "General": {
+          "precision": 0.940677966101695,
+          "recall": 1.0,
+          "f1": 0.9694323144104804,
+          "support": 111
+        },
+        "Plumbing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 36
+        },
+        "Structural": {
+          "precision": 1.0,
+          "recall": 0.9818181818181818,
+          "f1": 0.9908256880733946,
+          "support": 55
+        }
+      },
+      "confusion_matrix": [
+        [
+          24,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          111,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          36,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          54
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "Electrical",
+        "General",
+        "Plumbing",
+        "Structural"
+      ],
+      "probe_predictions": {
+        "no electricity / power socket": "General",
+        "broken door hinge": "General",
+        "ceiling fan": "General",
+        "hallway light / socket": "General"
+      }
+    },
+    "negation_preserving_word_tfidf": {
+      "accuracy": 0.978448275862069,
+      "macro_f1": 0.972052767052767,
+      "weighted_f1": 0.9779769671148981,
+      "per_class": {
+        "Electrical": {
+          "precision": 1.0,
+          "recall": 0.8666666666666667,
+          "f1": 0.9285714285714286,
+          "support": 30
+        },
+        "General": {
+          "precision": 0.9736842105263158,
+          "recall": 1.0,
+          "f1": 0.9866666666666667,
+          "support": 111
+        },
+        "Plumbing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 36
+        },
+        "Structural": {
+          "precision": 0.9642857142857143,
+          "recall": 0.9818181818181818,
+          "f1": 0.972972972972973,
+          "support": 55
+        }
+      },
+      "confusion_matrix": [
+        [
+          26,
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          111,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          36,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          54
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "Electrical",
+        "General",
+        "Plumbing",
+        "Structural"
+      ],
+      "probe_predictions": {
+        "no electricity / power socket": "General",
+        "broken door hinge": "General",
+        "ceiling fan": "General",
+        "hallway light / socket": "General"
+      }
+    },
+    "word_char_tfidf_balanced": {
+      "accuracy": 0.9827586206896551,
+      "macro_f1": 0.9803346532475389,
+      "weighted_f1": 0.9828732834951935,
+      "per_class": {
+        "Electrical": {
+          "precision": 1.0,
+          "recall": 0.9333333333333333,
+          "f1": 0.9655172413793104,
+          "support": 30
+        },
+        "General": {
+          "precision": 1.0,
+          "recall": 0.9819819819819819,
+          "f1": 0.990909090909091,
+          "support": 111
+        },
+        "Plumbing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 36
+        },
+        "Structural": {
+          "precision": 0.9322033898305084,
+          "recall": 1.0,
+          "f1": 0.9649122807017544,
+          "support": 55
+        }
+      },
+      "confusion_matrix": [
+        [
+          28,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          109,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          36,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          55
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "Electrical",
+        "General",
+        "Plumbing",
+        "Structural"
+      ],
+      "probe_predictions": {
+        "no electricity / power socket": "Electrical",
+        "broken door hinge": "Structural",
+        "ceiling fan": "General",
+        "hallway light / socket": "Electrical"
+      }
+    }
+  },
+  "selected_candidate_by_validation": "word_char_tfidf_balanced",
+  "selection_rule": "Highest validation macro F1, tie-break by the higher of the minimum Electrical/Structural recall.",
+  "reserved_final_test_results": {
+    "baseline_word_tfidf": {
+      "accuracy": 0.9689655172413794,
+      "macro_f1": 0.9664685791409016,
+      "weighted_f1": 0.9686184465575259,
+      "per_class": {
+        "Electrical": {
+          "precision": 1.0,
+          "recall": 0.8648648648648649,
+          "f1": 0.927536231884058,
+          "support": 37
+        },
+        "General": {
+          "precision": 0.9391891891891891,
+          "recall": 1.0,
+          "f1": 0.9686411149825784,
+          "support": 139
+        },
+        "Plumbing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 46
+        },
+        "Structural": {
+          "precision": 1.0,
+          "recall": 0.9411764705882353,
+          "f1": 0.9696969696969697,
+          "support": 68
+        }
+      },
+      "confusion_matrix": [
+        [
+          32,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          139,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          46,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          64
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "Electrical",
+        "General",
+        "Plumbing",
+        "Structural"
+      ]
+    },
+    "word_char_tfidf_balanced": {
+      "accuracy": 0.993103448275862,
+      "macro_f1": 0.9944829424307036,
+      "weighted_f1": 0.9930766120138225,
+      "per_class": {
+        "Electrical": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 37
+        },
+        "General": {
+          "precision": 0.9858156028368794,
+          "recall": 1.0,
+          "f1": 0.9928571428571429,
+          "support": 139
+        },
+        "Plumbing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 46
+        },
+        "Structural": {
+          "precision": 1.0,
+          "recall": 0.9705882352941176,
+          "f1": 0.9850746268656716,
+          "support": 68
+        }
+      },
+      "confusion_matrix": [
+        [
+          37,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          139,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          46,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          66
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "Electrical",
+        "General",
+        "Plumbing",
+        "Structural"
+      ]
+    }
+  },
+  "probe_examples": {
+    "no electricity / power socket": "There is no electricity in my room and the power socket is not working.",
+    "broken door hinge": "The door hinge is broken and the door is difficult to close.",
+    "ceiling fan": "The ceiling fan is not working properly.",
+    "hallway light / socket": "The hallway light and electrical socket are not working."
+  },
+  "production_artifacts_modified": false
+}

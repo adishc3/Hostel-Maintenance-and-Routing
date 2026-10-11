@@ -73,6 +73,77 @@ An additional representative lighting/socket complaint also predicts
 `General`, confirming that Electrical recall remains a concern despite strong
 aggregate test scores.
 
+## Category error diagnosis and alternatives
+
+The target labels used in these metrics are assigned by
+`classify_hostel_category()` rules over the complaint text, not by an
+independent human annotation. After exact duplicate removal, the labels are
+imbalanced: General 695/1,450 (47.9%), Structural 342 (23.6%), Plumbing 228
+(15.7%), and Electrical 185 (12.8%). The General class is 3.76 times the size
+of Electrical. On the reserved 290-row test set, the current baseline's
+Electrical precision/recall/F1 are 1.00/0.865/0.928, General is
+0.939/1.00/0.969, Plumbing is 1.00/1.00/1.00, and Structural is
+1.00/0.941/0.970. Its errors are five Electrical→General and four
+Structural→General.
+
+All four requested examples map to their expected classes under the notebook
+keyword rules. Yet the active model assigns General probabilities of 0.481 for
+the electricity/socket complaint, 0.547 for the broken hinge, 0.586 for the
+fan, and 0.494 for the hallway light/socket complaint. The active vocabulary
+does not contain `socket` (it occurs zero times in the source text after
+deduplication); `electricity` occurs 39 times, `power` 10, `fan` 22, and
+`hinge` 13. All observed fan examples are assigned Electrical by the rule,
+and all observed hinge examples Structural, so the problem is not absence of
+these words but the short probes' mismatch with the longer, templated examples
+and model decision boundary. Nearest active-TF-IDF complaint similarities
+were only 0.244–0.423. Preprocessing removes `no` and `not` (as well as
+negation variants), which discards potentially meaningful symptom wording.
+
+The source has 14 original category labels collapsed into four heuristic
+labels. For example, rows with original category `Electrical` are spread over
+all four generated classes (29 Electrical, 73 General, 31 Plumbing, 47
+Structural among the deduplicated rows). This is not independent proof that
+each row is mislabeled—the taxonomies differ—but it makes human label review
+important. The reported scores measure fit to the keyword mapping, not verified
+department-routing truth.
+
+Alternatives were fitted only on a stratified fit partition (928 rows) and
+compared on a separate validation partition (232 rows), both carved from the
+original 1,160-row development set. Candidate selection used validation macro
+F1, with minimum Electrical/Structural recall as a tie-breaker. The original
+290-row test partition was kept for final evaluation and was not used to select
+the candidate:
+
+| Candidate | Validation accuracy | Validation macro F1 | Electrical P/R/F1 | Structural P/R/F1 | Probe cases correct |
+|---|---:|---:|---:|---:|---:|
+| Word TF-IDF baseline | 97.84% | 0.9743 | 1.000 / 0.867 / 0.929 | 1.000 / 0.982 / 0.991 | 0/4 |
+| Word TF-IDF, balanced | 98.28% | 0.9802 | 1.000 / 0.933 / 0.966 | 0.947 / 0.982 / 0.964 | 2/4 |
+| Expanded word n-grams | 96.98% | 0.9623 | 1.000 / 0.800 / 0.889 | 1.000 / 0.982 / 0.991 | 0/4 |
+| Preserve negation + word TF-IDF | 97.84% | 0.9721 | 1.000 / 0.867 / 0.929 | 0.964 / 0.982 / 0.973 | 0/4 |
+| Word + character TF-IDF, balanced | 98.28% | **0.9803** | 1.000 / 0.933 / 0.966 | 0.932 / 1.000 / 0.965 | **3/4** |
+
+Preserving negation alone did not improve macro F1 or the probes. Character
+features plus class balancing were the validation-selected candidate. On the
+reserved test set it scored 99.31% accuracy and 0.9945 macro F1, compared with
+the baseline's 96.90% and 0.9665. Its per-class test precision/recall/F1 were:
+Electrical 1.000/1.000/1.000, General 0.986/1.000/0.993, Plumbing
+1.000/1.000/1.000, and Structural 1.000/0.971/0.985. Those are improvements
+demonstrated on this one held-out set of heuristic labels, not proof of
+real-world correctness. The ceiling-fan probe remained General even for this
+candidate; only the electricity/socket, hinge, and hallway light/socket probes
+changed to the expected label.
+
+Detailed validation/test confusion matrices, per-class results, class counts,
+and probe outputs are in
+[`evaluation/category_error_experiments.json`](./evaluation/category_error_experiments.json).
+No active artifact has been replaced. The candidate uses a different
+word-plus-character vectorizer; because the current runtime shares one
+vectorizer between category and priority models, promotion also requires
+retraining and evaluating priority with that exact feature representation.
+Until that compatibility and priority evaluation are done—and labels are
+checked against human-reviewed routing examples—the current fitted artifacts
+remain active.
+
 ## Integration boundary
 
 FastAPI loads the prediction service once during application startup. This

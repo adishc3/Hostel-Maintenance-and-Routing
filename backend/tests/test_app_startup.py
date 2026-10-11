@@ -1,6 +1,7 @@
 import sys
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import AsyncMock, patch
 
 
@@ -38,8 +39,15 @@ class AppStartupTests(unittest.IsolatedAsyncioTestCase):
 
         email = "prediction-regression@example.invalid"
         credentials = Credentials(email=email, password="safe-password-123")
-        registered = await register(credentials, Request())
-        authenticated = await login(credentials, Request())
+        with patch(
+            "app.routers.auth.get_settings",
+            return_value=SimpleNamespace(
+                jwt_secret_key="test-only-secret-with-at-least-32-bytes",
+                jwt_access_token_minutes=60,
+            ),
+        ):
+            registered = await register(credentials, Request())
+            authenticated = await login(credentials, Request())
         self.assertIn("message", registered)
         self.assertEqual(authenticated["email"], email)
 

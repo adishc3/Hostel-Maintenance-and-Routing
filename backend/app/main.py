@@ -7,6 +7,7 @@ from fastapi.staticfiles import StaticFiles
 
 from app.config import get_settings
 from app.routers.auth import router as auth_router
+from app.routers.complaints import router as complaints_router
 from app.services.database_service import DatabaseService
 from app.services.prediction_service import PredictionService
 
@@ -34,6 +35,7 @@ app.add_middleware(
 )
 
 app.include_router(auth_router, prefix="/auth", tags=["auth"])
+app.include_router(complaints_router, prefix="/complaints", tags=["complaints"])
 
 
 @app.get("/health")
