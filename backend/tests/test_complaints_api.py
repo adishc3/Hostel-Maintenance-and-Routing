@@ -86,6 +86,9 @@ class FakeCollection:
         if document is not None:
             before = document.copy()
             document.update(update.get("$set", {}))
+            if "$push" in update:
+                for field, value in update["$push"].items():
+                    document.setdefault(field, []).append(value)
             return document if return_document == ReturnDocument.AFTER else before
         return None
 
@@ -153,7 +156,13 @@ class ComplaintApiTests(unittest.TestCase):
                     "category": "Electrical",
                     "name": "Electrical Maintenance",
                     "active": True,
-                }
+                },
+                {
+                    "_id": self.other_department_id,
+                    "category": "Plumbing",
+                    "name": "Plumbing Maintenance",
+                    "active": True,
+                },
             ]
         )
         self.staff = FakeCollection(
@@ -244,7 +253,9 @@ class ComplaintApiTests(unittest.TestCase):
         stored = self.complaints.documents[0]
         self.assertEqual(stored["student_id"], self.student_id)
         self.assertEqual(stored["category"], "Electrical")
+        self.assertEqual(stored["predicted_category"], "Electrical")
         self.assertEqual(stored["priority"], "High")
+        self.assertEqual(stored["predicted_priority"], "High")
         self.assertEqual(stored["department_id"], self.department_id)
         self.assertEqual(stored["department"], "Electrical Maintenance")
         self.assertEqual(stored["status"], "Pending")
@@ -306,6 +317,62 @@ class ComplaintApiTests(unittest.TestCase):
             json={"staff_id": str(self.other_staff_id)},
         )
         self.assertEqual(rejected_assignment.status_code, 422)
+
+    def test_admin_reclassifies_and_clears_incompatible_assignment(self):
+        complaint_id = self.create_complaint().json()["id"]
+        admin = self.find_user("admin")
+        assigned = self.client.put(
+            f"/complaints/{complaint_id}/assignment",
+            headers=self.headers(admin),
+            json={"staff_id": str(self.staff_id)},
+        )
+        self.assertEqual(assigned.status_code, 200)
+
+        response = self.client.patch(
+            f"/complaints/{complaint_id}/reclassify",
+            headers=self.headers(admin),
+            json={
+                "category": "Plumbing",
+                "reason": "Manual review identifies a leaking pipe.",
+            },
+        )
+        self.assertEqual(response.status_code, 200, response.text)
+        body = response.json()
+        self.assertEqual(body["category"], "Plumbing")
+        self.assertEqual(body["predicted_category"], "Electrical")
+        self.assertEqual(body["priority"], "High")
+        self.assertEqual(body["predicted_priority"], "High")
+        self.assertEqual(body["department"], "Plumbing Maintenance")
+        self.assertEqual(body["department_id"], str(self.other_department_id))
+        self.assertIsNone(body["assigned_staff_id"])
+        self.assertEqual(body["reclassification_history"][0]["reason"], "Manual review identifies a leaking pipe.")
+
+    def test_reclassification_requires_admin_and_valid_category(self):
+        complaint_id = self.create_complaint().json()["id"]
+        student = self.find_user("student")
+        staff = self.find_user("staff", self.department_id)
+        for user in (student, staff):
+            forbidden = self.client.patch(
+                f"/complaints/{complaint_id}/reclassify",
+                headers=self.headers(user),
+                json={"category": "Plumbing", "reason": "Manual correction"},
+            )
+            self.assertEqual(forbidden.status_code, 403)
+
+        admin = self.find_user("admin")
+        invalid = self.client.patch(
+            f"/complaints/{complaint_id}/reclassify",
+            headers=self.headers(admin),
+            json={"category": "Unknown", "reason": "Manual correction"},
+        )
+        self.assertEqual(invalid.status_code, 422)
+
+        missing = self.client.patch(
+            "/complaints/not-an-object-id/reclassify",
+            headers=self.headers(admin),
+            json={"category": "Plumbing", "reason": "Manual correction"},
+        )
+        self.assertEqual(missing.status_code, 400)
 
     def test_empty_description_and_invalid_token_are_rejected(self):
         response = self.client.post(

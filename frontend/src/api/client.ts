@@ -2,6 +2,7 @@ import type {
   Complaint,
   ComplaintAssignmentRequest,
   ComplaintCreateRequest,
+  ComplaintReclassificationRequest,
   ComplaintListResponse,
   ComplaintStatus,
   ComplaintStatusUpdateRequest,
@@ -143,6 +144,13 @@ export const api = {
   assignComplaint(id: string, payload: ComplaintAssignmentRequest): Promise<Complaint> {
     return request(`/complaints/${encodeURIComponent(id)}/assignment`, {
       method: "PUT",
+      body: JSON.stringify(payload),
+    });
+  },
+
+  reclassifyComplaint(id: string, payload: ComplaintReclassificationRequest): Promise<Complaint> {
+    return request(`/complaints/${encodeURIComponent(id)}/reclassify`, {
+      method: "PATCH",
       body: JSON.stringify(payload),
     });
   },

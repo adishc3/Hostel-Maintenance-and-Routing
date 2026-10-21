@@ -36,6 +36,19 @@ The service fails closed when `JWT_SECRET_KEY` is empty: login and token validat
 
 Do not expose this operation as a public route or accept a client-supplied role during registration. The current admin assignment API accepts a staff MongoDB ID and the server verifies that the staff record is active and belongs to the complaint department.
 
+Administrators can correct an ML category without changing the frozen model:
+
+```text
+PATCH /complaints/{complaint_id}/reclassify
+{
+  "category": "Plumbing",
+  "reason": "Manual review identifies a leaking pipe."
+}
+```
+
+The server resolves the active department from the category, preserves the original
+ML prediction, appends an audit entry, and clears an incompatible staff assignment.
+
 For local provisioning, use the included script from the repository root. It prompts for the password without printing it:
 
 ```powershell

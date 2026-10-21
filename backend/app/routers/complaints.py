@@ -12,6 +12,7 @@ from app.schemas import (
     ComplaintCreate,
     ComplaintList,
     ComplaintRead,
+    ComplaintReclassification,
     ComplaintStatus,
     ComplaintStatusUpdate,
 )
@@ -59,12 +60,15 @@ def _require_mongo_database(request: Request):
 
 
 def _serialize_complaint(document: dict) -> dict:
+    history = document.get("reclassification_history", [])
     return {
         "id": str(document["_id"]),
         "student_id": str(document["student_id"]),
         "complaint": document["complaint"],
         "category": document["category"],
+        "predicted_category": document.get("predicted_category", document["category"]),
         "priority": document["priority"],
+        "predicted_priority": document.get("predicted_priority", document["priority"]),
         "priority_confidence": document.get("priority_confidence"),
         "category_confidence": document.get("category_confidence"),
         "department_id": str(document["department_id"]),
@@ -80,6 +84,15 @@ def _serialize_complaint(document: dict) -> dict:
         "created_at": document["created_at"],
         "updated_at": document["updated_at"],
         "resolved_at": document.get("resolved_at"),
+        "reclassification_history": [
+            {
+                **entry,
+                "previous_department_id": str(entry["previous_department_id"]),
+                "new_department_id": str(entry["new_department_id"]),
+                "admin_id": str(entry["admin_id"]),
+            }
+            for entry in history
+        ],
     }
 
 
@@ -135,7 +148,9 @@ async def create_complaint(
         "student_id": student_id,
         "complaint": payload.complaint,
         "category": prediction.category,
+        "predicted_category": prediction.category,
         "priority": prediction.priority,
+        "predicted_priority": prediction.priority,
         "category_confidence": prediction.category_confidence,
         "priority_confidence": prediction.priority_confidence,
         "department_id": department["_id"],
@@ -147,6 +162,7 @@ async def create_complaint(
         "created_at": now,
         "updated_at": now,
         "resolved_at": None,
+        "reclassification_history": [],
     }
     result = await database["complaints"].insert_one(complaint)
     complaint["_id"] = result.inserted_id
@@ -264,6 +280,80 @@ async def update_complaint_status(
     updated = await complaints.find_one_and_update(
         {"_id": complaint_object_id},
         {"$set": update},
+        return_document=ReturnDocument.AFTER,
+    )
+    return _serialize_complaint(updated)
+
+
+@router.patch(
+    "/{complaint_id}/reclassify",
+    response_model=ComplaintRead,
+)
+async def reclassify_complaint(
+    complaint_id: str,
+    payload: ComplaintReclassification,
+    request: Request,
+    user: dict = Depends(require_roles("admin")),
+) -> dict:
+    database = _require_mongo_database(request)
+    complaint_object_id = _object_id(complaint_id, "complaint ID")
+    complaints = database["complaints"]
+    complaint = await complaints.find_one({"_id": complaint_object_id})
+    if complaint is None:
+        raise HTTPException(status_code=404, detail="Complaint not found")
+
+    current_category = complaint.get("category")
+    if current_category == payload.category.value:
+        return _serialize_complaint(complaint)
+
+    department = await database["departments"].find_one(
+        {"category": payload.category.value, "active": True}
+    )
+    if department is None:
+        logger.error("No active department configured for category %s", payload.category.value)
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="No active department is configured for the selected category",
+        )
+
+    assigned_staff_id = complaint.get("assigned_staff_id")
+    clear_assignment = False
+    if assigned_staff_id is not None:
+        assigned_staff = await database["staff"].find_one(
+            {"_id": assigned_staff_id, "active": True}
+        )
+        clear_assignment = (
+            assigned_staff is None
+            or assigned_staff.get("department_id") != department["_id"]
+        )
+
+    now = datetime.now(timezone.utc)
+    history_entry = {
+        "previous_category": current_category,
+        "new_category": payload.category.value,
+        "previous_department_id": complaint["department_id"],
+        "previous_department": complaint["department"],
+        "new_department_id": department["_id"],
+        "new_department": department["name"],
+        "reason": payload.reason,
+        "admin_id": _object_id(user["id"], "authenticated user ID"),
+        "timestamp": now,
+    }
+    update = {
+        "$set": {
+            "category": payload.category.value,
+            "department_id": department["_id"],
+            "department": department["name"],
+            "updated_at": now,
+        },
+        "$push": {"reclassification_history": history_entry},
+    }
+    if clear_assignment:
+        update["$set"]["assigned_staff_id"] = None
+
+    updated = await complaints.find_one_and_update(
+        {"_id": complaint_object_id},
+        update,
         return_document=ReturnDocument.AFTER,
     )
     return _serialize_complaint(updated)

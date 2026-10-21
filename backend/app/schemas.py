@@ -63,6 +63,31 @@ class ComplaintAssignment(BaseModel):
     staff_id: str = Field(min_length=24, max_length=24, pattern=r"^[0-9a-fA-F]{24}$")
 
 
+class ComplaintReclassification(BaseModel):
+    category: ComplaintCategory
+    reason: str = Field(min_length=1, max_length=1000)
+
+    @field_validator("reason")
+    @classmethod
+    def reason_must_have_text(cls, value: str) -> str:
+        value = value.strip()
+        if not value:
+            raise ValueError("Correction reason must not be empty")
+        return value
+
+
+class ReclassificationHistoryEntry(BaseModel):
+    previous_category: ComplaintCategory
+    new_category: ComplaintCategory
+    previous_department_id: str
+    previous_department: str
+    new_department_id: str
+    new_department: str
+    reason: str
+    admin_id: str
+    timestamp: datetime
+
+
 class ComplaintRead(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
@@ -70,7 +95,9 @@ class ComplaintRead(BaseModel):
     student_id: str
     complaint: str
     category: ComplaintCategory
+    predicted_category: ComplaintCategory
     priority: ComplaintPriority
+    predicted_priority: ComplaintPriority
     priority_confidence: float | None
     category_confidence: float | None
     department_id: str
@@ -82,6 +109,7 @@ class ComplaintRead(BaseModel):
     created_at: datetime
     updated_at: datetime
     resolved_at: datetime | None
+    reclassification_history: list[ReclassificationHistoryEntry]
 
 
 class ComplaintList(BaseModel):

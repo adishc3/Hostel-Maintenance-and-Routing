@@ -78,10 +78,15 @@ describe("backend API contracts", () => {
     saveSessionToken("session-token");
     fetchMock
       .mockResolvedValueOnce(jsonResponse({ id: "complaint-id", status: "In Progress" }))
-      .mockResolvedValueOnce(jsonResponse({ id: "complaint-id", assigned_staff_id: "staff-id" }));
+      .mockResolvedValueOnce(jsonResponse({ id: "complaint-id", assigned_staff_id: "staff-id" }))
+      .mockResolvedValueOnce(jsonResponse({ id: "complaint-id", category: "Plumbing" }));
 
     await api.updateStatus("complaint-id", { status: "In Progress", note: "Started" });
     await api.assignComplaint("complaint-id", { staff_id: "0123456789abcdef01234567" });
+    await api.reclassifyComplaint("complaint-id", {
+      category: "Plumbing",
+      reason: "Manual review identified a leaking pipe.",
+    });
 
     expect(fetchMock.mock.calls[0][0]).toBe("/complaints/complaint-id/status");
     expect(fetchMock.mock.calls[0][1]).toEqual(expect.objectContaining({
@@ -92,6 +97,14 @@ describe("backend API contracts", () => {
     expect(fetchMock.mock.calls[1][1]).toEqual(expect.objectContaining({
       method: "PUT",
       body: JSON.stringify({ staff_id: "0123456789abcdef01234567" }),
+    }));
+    expect(fetchMock.mock.calls[2][0]).toBe("/complaints/complaint-id/reclassify");
+    expect(fetchMock.mock.calls[2][1]).toEqual(expect.objectContaining({
+      method: "PATCH",
+      body: JSON.stringify({
+        category: "Plumbing",
+        reason: "Manual review identified a leaking pipe.",
+      }),
     }));
   });
 

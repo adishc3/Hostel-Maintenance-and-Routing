@@ -4,7 +4,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { ApiError, api } from "../api/client";
 import { useAuth } from "../auth/AuthContext";
 import { ErrorNotice, Loading } from "./Feedback";
-import type { Complaint, ComplaintStatus } from "../types";
+import type { Complaint, ComplaintCategory, ComplaintStatus } from "../types";
 
 const statusOptions: Record<ComplaintStatus, ComplaintStatus[]> = {
   Pending: ["Pending", "In Progress", "Rejected"],
@@ -14,6 +14,13 @@ const statusOptions: Record<ComplaintStatus, ComplaintStatus[]> = {
 };
 
 const allStatuses: ComplaintStatus[] = ["Pending", "In Progress", "Resolved", "Rejected"];
+const categories: ComplaintCategory[] = ["Electrical", "Plumbing", "Structural", "General"];
+const departmentNames: Record<ComplaintCategory, string> = {
+  Electrical: "Electrical Maintenance",
+  Plumbing: "Plumbing Maintenance",
+  Structural: "Structural Maintenance",
+  General: "General Maintenance",
+};
 
 export function ComplaintDetail() {
   const { id = "" } = useParams();
@@ -27,6 +34,8 @@ export function ComplaintDetail() {
   const [nextStatus, setNextStatus] = useState<ComplaintStatus>("Pending");
   const [note, setNote] = useState("");
   const [staffId, setStaffId] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<ComplaintCategory>("General");
+  const [correctionReason, setCorrectionReason] = useState("");
   const [success, setSuccess] = useState(
     typeof location.state?.notice === "string" ? location.state.notice : "",
   );
@@ -38,6 +47,7 @@ export function ComplaintDetail() {
       const result = await api.complaint(id);
       setComplaint(result);
       setNextStatus(result.status);
+      setSelectedCategory(result.category);
     } catch (caught) {
       setError(caught instanceof ApiError ? caught.message : "Could not load this complaint.");
     } finally {
@@ -87,6 +97,29 @@ export function ComplaintDetail() {
     } finally {
       setSaving(false);
     }
+
+  }
+
+  async function reclassify(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!complaint) return;
+    setSaving(true);
+    setError("");
+    setSuccess("");
+    try {
+      const result = await api.reclassifyComplaint(complaint.id, {
+        category: selectedCategory,
+        reason: correctionReason.trim(),
+      });
+      setComplaint(result);
+      setSelectedCategory(result.category);
+      setCorrectionReason("");
+      setSuccess("Complaint category and department updated.");
+    } catch (caught) {
+      setError(caught instanceof ApiError ? caught.message : "Category correction failed.");
+    } finally {
+      setSaving(false);
+    }
   }
 
   if (loading) return <Loading label="Loading complaint…" />;
@@ -120,6 +153,7 @@ export function ComplaintDetail() {
         <div className="detail-grid">
           <DetailItem icon={<Building2 size={16} />} label="Assigned department" value={complaint.department} />
           <DetailItem icon={<Wrench size={16} />} label="Predicted priority" value={complaint.priority} />
+          <DetailItem icon={<Wrench size={16} />} label="Original ML category" value={`${complaint.predicted_category} (${formatConfidence(complaint.category_confidence)})`} />
           <DetailItem icon={<CalendarDays size={16} />} label="Submitted" value={new Date(complaint.created_at).toLocaleString()} />
           <DetailItem
             icon={<MapPin size={16} />}
@@ -153,6 +187,42 @@ export function ComplaintDetail() {
             </label>
             <button className="button button-primary" disabled={saving} type="submit">
               {saving ? "Saving…" : "Save status"}
+            </button>
+          </div>
+        </form>
+      )}
+
+      {user?.role === "admin" && (
+        <form className="action-panel" onSubmit={reclassify}>
+          <p className="eyebrow">ADMINISTRATION</p>
+          <h2>Correct complaint category</h2>
+          <p className="muted-copy">
+            The original ML prediction is preserved. The server will route the selected category to its active department.
+            A department change may clear the current staff assignment.
+          </p>
+          <div className="inline-fields">
+            <label className="field">
+              <span>Effective category</span>
+              <select
+                value={selectedCategory}
+                onChange={(event) => setSelectedCategory(event.target.value as ComplaintCategory)}
+              >
+                {categories.map((category) => <option key={category}>{category}</option>)}
+              </select>
+              <small className="field-hint">Department preview: {departmentNames[selectedCategory]}</small>
+            </label>
+            <label className="field">
+              <span>Correction reason</span>
+              <input
+                required
+                maxLength={1000}
+                value={correctionReason}
+                onChange={(event) => setCorrectionReason(event.target.value)}
+                placeholder="Explain why the category is incorrect"
+              />
+            </label>
+            <button className="button button-primary" disabled={saving} type="submit">
+              {saving ? "Updating…" : "Update category"}
             </button>
           </div>
         </form>
