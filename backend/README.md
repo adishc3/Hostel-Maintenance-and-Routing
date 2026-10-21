@@ -36,6 +36,15 @@ The service fails closed when `JWT_SECRET_KEY` is empty: login and token validat
 
 Do not expose this operation as a public route or accept a client-supplied role during registration. The current admin assignment API accepts a staff MongoDB ID and the server verifies that the staff record is active and belongs to the complaint department.
 
+For local provisioning, use the included script from the repository root. It prompts for the password without printing it:
+
+```powershell
+.\.venv\Scripts\python.exe backend\create_user.py --name "Hostel Admin" --email admin@hostel.local --role admin
+.\.venv\Scripts\python.exe backend\create_user.py --name "Electrical Staff" --email staff@hostel.local --role staff --department-id <department-object-id>
+```
+
+The script reads `MONGODB_URI` and `MONGODB_DATABASE` from the existing environment configuration, rejects duplicate email addresses, and only accepts `admin` or `staff`. Staff provisioning also requires an active department and creates the matching active record in the `staff` collection. To obtain a valid department ID, inspect the active documents in the `departments` collection in MongoDB Compass; use the value of their `_id` field. Never expose this script as a web endpoint or commit credentials.
+
 ## Backend checks
 
 ```powershell
