@@ -152,8 +152,7 @@ export function ComplaintDetail() {
         <p className="detail-description">{complaint.complaint}</p>
         <div className="detail-grid">
           <DetailItem icon={<Building2 size={16} />} label="Assigned department" value={complaint.department} />
-          <DetailItem icon={<Wrench size={16} />} label="Predicted priority" value={complaint.priority} />
-          <DetailItem icon={<Wrench size={16} />} label="Original ML category" value={`${complaint.predicted_category} (${formatConfidence(complaint.category_confidence)})`} />
+          <DetailItem icon={<Wrench size={16} />} label="Priority" value={complaint.priority} />
           <DetailItem icon={<CalendarDays size={16} />} label="Submitted" value={new Date(complaint.created_at).toLocaleString()} />
           <DetailItem
             icon={<MapPin size={16} />}
@@ -161,13 +160,7 @@ export function ComplaintDetail() {
             value={[complaint.hostel, complaint.room ? `Room ${complaint.room}` : null].filter(Boolean).join(" · ") || "Not provided"}
           />
           <DetailItem icon={<UserRound size={16} />} label="Assigned staff" value={complaint.assigned_staff_id || "Not assigned"} />
-          <DetailItem
-            icon={<CalendarDays size={16} />}
-            label="Model confidence"
-            value={`Category ${formatConfidence(complaint.category_confidence)} · Priority ${formatConfidence(complaint.priority_confidence)}`}
-          />
         </div>
-        <p className="confidence-note">Model confidence is an estimate, not a guarantee of correctness.</p>
       </article>
 
       {canUpdateStatus && (
@@ -197,7 +190,7 @@ export function ComplaintDetail() {
           <p className="eyebrow">ADMINISTRATION</p>
           <h2>Correct complaint category</h2>
           <p className="muted-copy">
-            The original ML prediction is preserved. The server will route the selected category to its active department.
+            The current category is preserved in the record. The server will route the selected category to its active department.
             A department change may clear the current staff assignment.
           </p>
           <div className="inline-fields">
@@ -263,8 +256,4 @@ function DetailItem({ icon, label, value }: { icon: ReactNode; label: string; va
       <div><span className="detail-label">{label}</span><strong>{value}</strong></div>
     </div>
   );
-}
-
-function formatConfidence(value: number | null): string {
-  return value === null ? "Unavailable" : `${Math.round(value * 100)}%`;
 }

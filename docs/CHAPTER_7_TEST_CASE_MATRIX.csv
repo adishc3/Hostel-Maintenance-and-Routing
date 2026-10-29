@@ -1,0 +1,25 @@
+Test ID,Module,Test Scenario,Input / Preconditions,Expected Result,Actual Result,Status
+B-01,Authentication,Existing local registration and login,Backend startup test with local user store,Registration and login remain functional,Automated test passed,Pass
+B-02,Startup/ML,Prediction service loads once at startup,Frozen artifacts present,Startup loads service successfully,Automated test passed,Pass
+B-03,Reclassification,Admin changes category and clears incompatible assignment,Mock complaint assigned to Electrical staff; admin changes to Plumbing,Category/department change original prediction preserved assignment cleared,Automated test passed,Pass
+B-04,Complaint creation,Stores prediction identity and department,Student submits valid complaint,Prediction student ID department and timestamps persist,Automated test passed,Pass
+B-05,Validation/security,Empty description and invalid token,Blank complaint and invalid bearer token,Requests rejected with validation/auth errors,Automated test passed,Pass
+B-06,Authentication/roles,Login current user and role restriction,Student login and staff attempts student-only creation,Login succeeds and staff request rejected,Automated test passed,Pass
+B-07,ML failure handling,Prediction/department failures do not create complaints,Mock prediction failure and missing department,Safe error and no complaint persisted,Automated test passed,Pass
+B-08,Reclassification security,Non-admin and malformed reclassification requests,Student/staff caller invalid category invalid ID,Requests rejected with role/validation/ID errors,Automated test passed,Pass
+B-09,Assignment/status,Staff status update and admin assignment,Authorized staff/admin and incompatible staff record,Valid mutations succeed and incompatible assignment rejected,Automated test passed,Pass
+B-10,Ownership/access,Student ownership and staff department scope,Student outsider staff and cross-department filter,Owner access succeeds and unauthorized access rejected,Automated test passed,Pass
+B-11,ML service,Both models accept shared vectorized input,Active vectorizer and classifiers,Shared feature input accepted,Automated test passed,Pass
+B-12,ML validation,Empty and invalid complaint text,Empty/non-string inputs,Clear prediction errors,Automated test passed,Pass
+B-13,ML artifacts,Missing artifact handling,Missing artifact test fixture,Missing artifact is reported,Automated test passed,Pass
+B-14,ML examples,Notebook external examples remain executable,External example inputs,Predictions returned without assuming correctness,Automated test passed,Pass
+B-15,ML error handling,Prediction failure is logged and raised,Model failure fixture,PredictionError is raised,Automated test passed,Pass
+B-16,ML labels,Representative complaints use supported labels,Representative category/priority inputs,Labels belong to supported sets,Automated test passed,Pass
+F-01,Frontend auth,Registration/login API contract,Mocked fetch responses,Correct auth routes methods and payloads used,Vitest test passed,Pass
+F-02,Frontend complaints,Complaint routes and bearer token,Mocked protected requests,Correct complaint fields/routes and Authorization header used,Vitest test passed,Pass
+F-03,Frontend mutations,Status assignment and reclassification contracts,Mocked mutation responses,Correct mutation routes and payloads used,Vitest test passed,Pass
+F-04,Frontend session,Unauthorized response handling,Mocked HTTP 401,Session token is cleared and error is raised,Vitest test passed,Pass
+ML-01,Runtime ML,Load active artifacts and predict four descriptions,Real local frozen artifacts,Four predictions use supported labels and expose confidence values,Probe passed; socket example observed as General / High,Pass
+I-01,Live backend,FastAPI health endpoint,Configured Atlas connection,HTTP 200 health response,Backend exited during MongoDB TLS startup failure,Blocked
+I-02,Live database,MongoDB health endpoint,Configured Atlas connection,MongoDB connected response,Could not request endpoint because startup was blocked by TLS handshake failure,Blocked
+I-03,Live API docs,OpenAPI endpoint,Backend running,HTTP 200 docs response,Could not request endpoint because startup was blocked by TLS handshake failure,Blocked
