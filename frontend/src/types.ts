@@ -28,6 +28,7 @@ export interface Complaint {
   department_id: string;
   department: string;
   status: ComplaintStatus;
+  status_note: string | null;
   assigned_staff_id: string | null;
   hostel: string | null;
   room: string | null;

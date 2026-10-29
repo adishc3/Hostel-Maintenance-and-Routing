@@ -161,6 +161,12 @@ export function ComplaintDetail() {
           />
           <DetailItem icon={<UserRound size={16} />} label="Assigned staff" value={complaint.assigned_staff_id || "Not assigned"} />
         </div>
+        {complaint.status_note && (
+          <div className="status-note">
+            <span className="detail-label">Latest update note</span>
+            <p>{complaint.status_note}</p>
+          </div>
+        )}
       </article>
 
       {canUpdateStatus && (
